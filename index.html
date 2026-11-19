@@ -3,30 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#0c1328" />
+  <meta name="theme-color" content="#141E36" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>Yash &amp; Misha — Our Eternal Union Saga | #YashMeGhuliMishri | Dec 13–14, 2026</title>
+  <title>Yash &amp; Misha’s Wedding Saga — #YashMeGhuliMishri | Dec 13–14, 2026</title>
 
-  <!-- Google Fonts: Great Vibes, Cormorant Garamond, Playfair Display, Plus Jakarta Sans, Noto Serif Devanagari -->
+  <!-- Google Fonts: Great Vibes (Gold Script), Cormorant Garamond (Editorial Serif), Noto Serif Devanagari -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root {
-      --indigo-base: #0c1328;
-      --indigo-mid: #14203d;
-      --indigo-deep: #070c1a;
-      --gold-luminous: #FCE9B5;
+      --indigo-base: #17223B;
+      --indigo-deep: #0E1629;
+      --gold-light: #F5DFA0;
       --gold-primary: #E8C97A;
-      --gold-metallic: #C89F4C;
+      --gold-metallic: #C8A248;
       --gold-bronze: #7D5F2A;
-      --cream-primary: #F6F0E4;
-      --periwinkle-sub: #B9C4DC;
+      --cream-primary: #F4EFE6;
+      --periwinkle-sub: #B8C2D8;
     }
 
     *, *::before, *::after {
@@ -39,14 +37,14 @@
       padding: 0;
       width: 100%;
       min-height: 100dvh;
-      background-color: #060913;
+      background-color: #160F10;
       color: var(--cream-primary);
-      font-family: 'Cormorant Garamond', 'Playfair Display', 'Noto Serif Devanagari', Georgia, serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif Devanagari', Georgia, serif;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    /* Mobile-First Centered Frame (430px on desktop, full bleed on phones) */
+    /* Mobile Frame Container (430px centered on desktop, 100% full bleed on mobile) */
     .invite-shell {
       position: relative;
       width: 100%;
@@ -54,32 +52,30 @@
       margin: 0 auto;
       min-height: 100dvh;
       background-color: var(--indigo-base);
-      box-shadow: 0 0 70px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 0 65px rgba(0, 0, 0, 0.85);
       overflow-x: hidden;
     }
 
-    /* Deep Indigo Handmade Paper Surface (strictly local ./paper.webp over #0c1328) */
+    /* Seamless Royal Indigo Handmade Paper Texture */
     .indigo-paper {
       position: relative;
-      background-color: #0c1328;
-      background-image:
-        radial-gradient(circle at 50% 0%, rgba(232, 201, 122, 0.06), transparent 55%),
-        url('./paper.webp');
-      background-repeat: no-repeat, repeat;
-      background-size: 100% 600px, 380px auto;
-      background-position: top center, top center;
+      background-color: #17223B;
+      background-image: url('./paper.webp');
+      background-repeat: repeat;
+      background-size: 380px auto;
+      background-position: top center;
     }
 
-    /* Typography Helpers */
+    /* Typography Classes */
     .font-script {
       font-family: 'Great Vibes', cursive;
       color: var(--gold-primary);
-      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
       font-weight: 400;
     }
 
     .font-serif-ed {
-      font-family: 'Cormorant Garamond', 'Playfair Display', 'Noto Serif Devanagari', Georgia, serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif Devanagari', Georgia, serif;
     }
 
     .font-hindi {
@@ -90,98 +86,73 @@
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
-    /* Ornamental Divider Styling */
-    .ornate-divider-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 10px auto 0;
-      min-height: 24px;
-    }
+    /* Ornamental Divider Image (divider.webp) */
     .ornate-divider-img {
-      height: 26px;
-      width: auto;
-      max-width: 190px;
+      width: 172px;
+      height: auto;
       display: block;
-      object-fit: contain;
+      margin: 10px auto 0;
     }
 
-    /* Hero Text Reveal Transitions */
-    .hero-reveal-item {
-      opacity: 0;
-      transform: translateY(10px) scale(0.985);
-      filter: blur(2px);
-      transition:
-        opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 0.95s cubic-bezier(0.22, 1, 0.36, 1),
-        filter 0.95s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .hero-reveal-item.is-visible {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+    /* Hero Text Entrance & Lit Glow State */
+    .hero-text-hidden {
+      opacity: 0.95;
       filter: blur(0);
+      transform: translateY(0) scale(1);
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1), filter 0.9s cubic-bezier(0.22, 1, 0.36, 1), transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .hero-text-visible {
+      opacity: 1;
+      filter: drop-shadow(0 0 12px rgba(247, 227, 163, 0.35));
+      transform: translateY(0) scale(1.015);
     }
 
-    /* Luminous High-Contrast Hashtag Pill */
-    .hero-hashtag-pill {
-      color: #FCE9B5;
-      background: rgba(8, 14, 32, 0.72);
-      border: 1px solid rgba(232, 201, 122, 0.48);
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.65), 0 0 18px rgba(232, 201, 122, 0.25);
-      text-shadow: 0 1px 10px rgba(0, 0, 0, 0.95), 0 0 14px rgba(252, 233, 181, 0.45);
-      backdrop-filter: blur(6px);
+    /* High-Contrast Hero Hashtag (#YashMeGhuliMishri) */
+    .hero-hashtag {
+      color: #F7E3A3;
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      line-height: 1.25;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95), 0 0 16px rgba(212, 175, 55, 0.45);
     }
 
-    /* Hero CTA Pulse Glow */
-    @keyframes goldPulse {
-      0%, 100% {
-        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75), 0 0 0 0 rgba(232, 201, 122, 0.45);
-      }
-      50% {
-        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.75), 0 0 22px 4px rgba(232, 201, 122, 0.28);
-      }
-    }
-    .hero-cta-glow {
-      animation: goldPulse 2.4s infinite ease-in-out;
-    }
-
-    /* Diya Flicker */
+    /* Diya Flame Flicker Animation */
     @keyframes diyaFlicker {
       0%, 100% { transform: scaleY(1) scaleX(1) rotate(-1deg); opacity: 0.96; }
-      35% { transform: scaleY(1.13) scaleX(0.93) rotate(1.5deg); opacity: 1; }
-      68% { transform: scaleY(0.93) scaleX(1.05) rotate(-1.5deg); opacity: 0.88; }
+      33% { transform: scaleY(1.14) scaleX(0.93) rotate(1.5deg); opacity: 1; }
+      66% { transform: scaleY(0.92) scaleX(1.05) rotate(-1.5deg); opacity: 0.89; }
     }
     .flame-flicker {
       transform-origin: center bottom;
-      animation: diyaFlicker 1.65s infinite ease-in-out;
+      animation: diyaFlicker 1.6s infinite ease-in-out;
     }
 
-    /* Scroll Chevron Float */
+    /* Gentle Floating Chevron */
     @keyframes gentleBounce {
-      0%, 100% { transform: translateY(0); opacity: 0.82; }
+      0%, 100% { transform: translateY(0); opacity: 0.8; }
       50% { transform: translateY(5px); opacity: 1; }
     }
     .chevron-bounce {
-      animation: gentleBounce 2.1s infinite ease-in-out;
+      animation: gentleBounce 2.2s infinite ease-in-out;
     }
 
-    /* Circular Gold-Foil Scratch Coins (The Date) */
-    .scratch-coin-ring {
-      width: 78px;
-      height: 78px;
-      border-radius: 9999px;
-      padding: 3.5px;
-      background: linear-gradient(135deg, #FCE9B5 0%, #C89F4C 50%, #7D5F2A 100%);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.52), 0 0 14px rgba(232, 201, 122, 0.16);
+    /* Scratch Card Styling */
+    .scratch-card-frame {
+      width: 105px;
+      height: 128px;
+      background: #F4EFE6;
+      padding: 4.5px;
+      border-radius: 12px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
       position: relative;
       user-select: none;
-      -webkit-user-select: none;
     }
-    .scratch-coin-inner {
+    .scratch-card-inner {
       width: 100%;
       height: 100%;
-      border-radius: 9999px;
-      background: radial-gradient(circle at 35% 30%, #FFF7DC 0%, #F1D384 52%, #C4963D 100%);
+      border-radius: 8.5px;
+      background: linear-gradient(135deg, #F6E09E 0%, #D4AF48 48%, #FDF0C4 72%, #B58A2A 100%);
       position: relative;
       overflow: hidden;
       display: flex;
@@ -191,80 +162,50 @@
       color: #1A1205;
     }
 
-    /* 4-Point Gold Diamond Marker (Our Story) */
-    .gold-diamond-4pt {
-      width: 16px;
-      height: 16px;
-      display: inline-block;
-      flex-shrink: 0;
-    }
+    /* Hide Scrollbars for Carousel */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
     /* Bronze Gold Pill Button */
     .btn-bronze-pill {
-      background: linear-gradient(180deg, #917033 0%, #6A4F20 100%);
-      border: 1px solid rgba(252, 233, 181, 0.55);
+      background: linear-gradient(180deg, #866830 0%, #684E20 100%);
+      border: 1px solid rgba(217, 180, 91, 0.65);
       border-radius: 9999px;
-      color: #F6F0E4;
+      color: #F4EFE6;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 600;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 243, 205, 0.28);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 240, 195, 0.25);
       transition: transform 0.15s ease, filter 0.15s ease;
-    }
-    .btn-bronze-pill:hover {
-      filter: brightness(1.08);
     }
     .btn-bronze-pill:active {
       transform: scale(0.97);
     }
-
-    /* Hide Scrollbars for Gallery Carousel */
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 <body>
 
-  <!-- Native HTML5 Wedding Audio Player (Strictly local ./Song.mp3 primary, ./song.mp3 secondary fallback) -->
-  <audio id="wedding-audio" loop preload="auto" playsinline>
-    <source src="./Song.mp3" type="audio/mpeg" />
-  </audio>
-
-  <!-- Shared SVG Definitions (Countdown Diyas, 4-Point Diamond, Mughal Arch ClipPath) -->
-  <svg width="0" height="0" class="absolute pointer-events-none" aria-hidden="true">
+  <!-- Hidden Reusable SVG Symbol for the 11 Countdown Diyas -->
+  <svg width="0" height="0" class="hidden" aria-hidden="true">
     <defs>
       <radialGradient id="divFlameGlow" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#FFF7D6" stop-opacity="0.98" />
-        <stop offset="50%" stop-color="#FFA53B" stop-opacity="0.58" />
+        <stop offset="0%" stop-color="#FFF6D6" stop-opacity="0.95" />
+        <stop offset="50%" stop-color="#FF9E3B" stop-opacity="0.55" />
         <stop offset="100%" stop-color="#E85D1A" stop-opacity="0" />
       </radialGradient>
-
       <symbol id="single-diya" viewBox="0 0 36 36">
-        <circle cx="18" cy="13" r="10.5" fill="url(#divFlameGlow)" />
-        <path d="M18 3.5 C14.6 9.8, 14.8 15.5, 18 19.2 C21.2 15.5, 21.4 9.8, 18 3.5 Z" fill="#FFEAA3" />
-        <path d="M18 7.5 C16.1 11.4, 16.2 15, 18 17.6 C19.8 15, 19.9 11.4, 18 7.5 Z" fill="#FF9830" />
-        <path d="M6 20.5 C6 27.2, 11.2 30.8, 18 30.8 C24.8 30.8, 30 27.2, 30 20.5 Z" fill="#B64B24" stroke="#E8C97A" stroke-width="1" />
-        <ellipse cx="18" cy="20.5" rx="12" ry="2.2" fill="#E8C97A" />
+        <circle cx="18" cy="13" r="10" fill="url(#divFlameGlow)"/>
+        <path d="M18 4 C14.8 10, 15 15.5, 18 19 C21 15.5, 21.2 10, 18 4 Z" fill="#FFE89E"/>
+        <path d="M18 7.5 C16.2 11.5, 16.2 15, 18 17.5 C19.8 15, 19.8 11.5, 18 7.5 Z" fill="#FF9830"/>
+        <path d="M6 20.5 C6 27, 11.2 30.5, 18 30.5 C24.8 30.5, 30 27, 30 20.5 Z" fill="#B54924" stroke="#E8C97A" stroke-width="1"/>
+        <ellipse cx="18" cy="20.5" rx="12" ry="2.2" fill="#E8C97A"/>
       </symbol>
-
-      <symbol id="diamond-4pt" viewBox="0 0 24 24">
-        <path d="M12 1.5 C13 8.5, 15.5 11, 22.5 12 C15.5 13, 13 15.5, 12 22.5 C11 15.5, 8.5 13, 1.5 12 C8.5 11, 11 8.5, 12 1.5 Z" fill="#FCE9B5" stroke="#C89F4C" stroke-width="0.9" />
-      </symbol>
-
-      <!-- Responsive Mughal Cusped Arch Clip Path for Gallery Cards -->
-      <clipPath id="mughalArchClip" clipPathUnits="objectBoundingBox">
-        <path d="M 0.500 0.026 C 0.575 0.090, 0.675 0.103, 0.733 0.168 C 0.800 0.232, 0.950 0.271, 0.950 0.381 L 0.950 0.968 L 0.050 0.968 L 0.050 0.381 C 0.050 0.271, 0.200 0.232, 0.267 0.168 C 0.325 0.103, 0.425 0.090, 0.500 0.026 Z" />
-      </clipPath>
-
-      <!-- Monogram Seal Circular Text Paths -->
-      <path id="sealTopArc" d="M 18,60 A 42,42 0 1,1 102,60" />
-      <path id="sealBottomArc" d="M 102,60 A 42,42 0 1,1 18,60" />
     </defs>
   </svg>
 
-  <!-- Toast Status Pill (Replaces any browser alert/confirm) -->
-  <div id="toast-pill" role="status" aria-live="polite" class="fixed top-16 left-1/2 -translate-x-1/2 -translate-y-8 opacity-0 pointer-events-none z-[1000] px-4 py-2 rounded-full bg-[#091024]/95 border border-[#C89F4C] text-[#FCE9B5] text-xs font-ui tracking-wide shadow-2xl transition-all duration-300 whitespace-nowrap">
+  <!-- Toast Notification -->
+  <div id="toast-pill" role="status" aria-live="polite" class="fixed top-4 left-1/2 -translate-x-1/2 -translate-y-12 opacity-0 pointer-events-none z-[1000] px-4 py-2 rounded-full bg-[#0D1527]/95 border border-[#C8A248] text-[#F4EFE6] text-xs font-ui tracking-wide shadow-2xl transition-all duration-300">
     <span id="toast-text">Notification</span>
   </div>
 
@@ -274,2661 +215,191 @@
   <div class="invite-shell">
 
     <!-- =================================================================== -->
-    <!-- FLOATING TOP CONTROLS: Top-Left Audio Button & Top-Right Language   -->
+    <!-- FLOATING BOTTOM-RIGHT CONTROLS (Language हिं/EN + Audio Pause/Play)  -->
     <!-- =================================================================== -->
-    <!-- Top-Left: Gold-Rimmed Circular Play/Pause Button -->
-    <button
-      type="button"
-      id="audio-toggle-btn"
-      aria-label="Play or pause wedding song"
-      class="fixed top-3.5 z-[900] w-11 h-11 rounded-full bg-[#0c1328]/88 border-[1.5px] border-[#E8C97A] text-[#FCE9B5] flex items-center justify-center shadow-[0_6px_20px_rgba(0,0,0,0.65)] backdrop-blur-md hover:bg-[#162347] active:scale-90 transition-all cursor-pointer"
-      style="left: max(14px, calc(50vw - 215px + 14px));"
-    >
-      <!-- Play Icon -->
-      <svg id="audio-icon-play" class="w-4 h-4 ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M8 5v14l11-7z" />
-      </svg>
-      <!-- Pause Icon -->
-      <svg id="audio-icon-pause" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M6 5h3.8v14H6V5zm8.2 0H18v14h-3.8V5z" />
-      </svg>
-    </button>
+    <div class="fixed bottom-5 z-[900] flex flex-col items-center gap-2.5" style="right: max(16px, calc(50vw - 215px + 16px));">
+      <!-- Language Toggle Button (हिं / EN) -->
+      <button type="button" id="lang-toggle-fab" aria-label="Toggle Hindi or English" class="w-[42px] h-[42px] rounded-full bg-[#152039]/90 border border-[#C8A248]/55 text-[#F4EFE6] flex items-center justify-center text-sm font-hindi shadow-[0_6px_18px_rgba(0,0,0,0.55)] backdrop-blur-md active:scale-90 transition-transform">
+        <span id="lang-fab-label">हिं</span>
+      </button>
 
-    <!-- Top-Right: Bilingual EN / हिंदी Toggle Button -->
-    <button
-      type="button"
-      id="lang-toggle-btn"
-      aria-label="Switch language between English and Hindi"
-      class="fixed top-3.5 z-[900] h-11 px-3.5 rounded-full bg-[#0c1328]/88 border-[1.5px] border-[#E8C97A]/80 text-[#FCE9B5] flex items-center justify-center gap-1.5 text-[13px] font-ui font-semibold tracking-wide shadow-[0_6px_20px_rgba(0,0,0,0.65)] backdrop-blur-md hover:bg-[#162347] active:scale-95 transition-all cursor-pointer"
-      style="right: max(14px, calc(50vw - 215px + 14px));"
-    >
-      <span id="lang-btn-label" class="font-hindi leading-none">हिंदी</span>
-    </button>
+      <!-- Gold Audio Play/Pause Button (|| / ▶) -->
+      <button type="button" id="audio-toggle-fab" aria-label="Toggle background wedding music" class="w-[52px] h-[52px] rounded-full bg-gradient-to-br from-[#F5DFA0] via-[#D8B256] to-[#B6892C] text-[#1A1205] flex items-center justify-center shadow-[0_8px_22px_rgba(0,0,0,0.65)] border border-[#FFF3C4]/60 active:scale-90 transition-transform">
+        <!-- Play Icon -->
+        <svg id="fab-icon-play" class="w-5 h-5 ml-0.5" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <!-- Pause Icon -->
+        <svg id="fab-icon-pause" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 5h3.5v14H6V5zm8.5 0H18v14h-3.5V5z"/>
+        </svg>
+      </button>
+    </div>
 
     <!-- =================================================================== -->
-    <!-- SECTION 1: IMMERSIVE HERO — AYODHYA DEEPOTSAV CANVAS + HIGH-SKY     -->
+    <!-- SECTION 1: HERO — DEEPOTSAV AT RAM MANDIR & SARYU GHAT              -->
     <!-- =================================================================== -->
-    <section
-      id="hero-section"
-      class="relative w-full h-[100dvh] min-h-[660px] max-h-[940px] overflow-hidden select-none bg-[#070d1f]"
-    >
-      <!-- Full-Viewport HTML5 Canvas: Renders ./opening-v2-first.webp, floating Saryu diya, 48-node diya ignition wave unmasking ./opening-v2-last.webp, and 5-palette jewel-toned fireworks -->
-      <canvas id="hero-stage-canvas" class="absolute inset-0 w-full h-full block z-[1]"></canvas>
+    <section id="hero-section" class="relative w-full h-[100dvh] min-h-[640px] max-h-[920px] overflow-hidden select-none bg-[#081326] cursor-pointer">
+      <!-- Layer 1: Unlit Keyframe Image (opening-v2-first.webp) -->
+      <img
+        id="hero-img-first"
+        src="./opening-v2-first.webp"
+        alt="Ayodhya Ram Mandir and Saryu Ghat at Dusk"
+        class="absolute inset-0 w-full h-full object-cover object-bottom z-[1]"
+      />
 
-      <!-- Subtle Top Sky Vignette for Effortless Legibility Above Ram Mandir Spire -->
+      <!-- Layer 2: Progressive Reveal Canvas for Lit Keyframe (opening-v2-last.webp) + Colorful Sky Fireworks -->
+      <canvas id="hero-stage-canvas" class="absolute inset-0 w-full h-full block z-[2] pointer-events-none"></canvas>
+
+      <!-- Top starry sky contrast vignette so #YashMeGhuliMishri & names stand out clearly above the temple spire -->
       <div
-        class="absolute inset-x-0 top-0 h-[36%] pointer-events-none z-[3]"
-        style="background: linear-gradient(180deg, rgba(6, 10, 24, 0.80) 0%, rgba(6, 10, 24, 0.42) 65%, rgba(6, 10, 24, 0) 100%);"
+        class="absolute inset-x-0 top-0 h-[34%] pointer-events-none z-[3]"
+        style="background: linear-gradient(180deg, rgba(6, 12, 26, 0.78) 0%, rgba(6, 12, 26, 0.42) 68%, rgba(6, 12, 26, 0) 100%);"
       ></div>
 
-      <!-- Bottom Seamless Gradient Blend Into Indigo Paper Body -->
+      <!-- Bottom seamless gradient fade into paper.webp below -->
       <div
-        class="absolute inset-x-0 bottom-0 h-28 pointer-events-none z-[3]"
-        style="background: linear-gradient(180deg, rgba(12, 19, 40, 0) 0%, rgba(12, 19, 40, 0.72) 65%, #0c1328 100%);"
+        class="absolute inset-x-0 bottom-0 h-24 pointer-events-none z-[3]"
+        style="background: linear-gradient(180deg, rgba(23, 34, 59, 0) 0%, rgba(23, 34, 59, 0.75) 68%, #17223B 100%);"
       ></div>
 
-      <!-- High-Sky Header Block (pt-[56px], compactly occupies top ~32% well above Ram Mandir spire) -->
-      <div class="relative z-[8] pt-[56px] px-4 text-center flex flex-col items-center pointer-events-none">
-        <p
-          id="hero-line-1"
-          class="hero-reveal-item text-[13.5px] sm:text-[14.5px] tracking-[0.08em] text-[#F6F0E4]/95 font-serif-ed drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]"
-          data-i18n="heroWelcome"
-        >
-          Welcome to the wedding of
-        </p>
-
-        <!-- Single-Line Couple Script Heading (leading-[1.05]) -->
-        <h1
-          id="hero-line-2"
-          class="hero-reveal-item font-script text-[2.75rem] sm:text-[3.1rem] leading-[1.05] text-[#FCE9B5] whitespace-nowrap mt-0.5 drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
-          data-i18n="heroCoupleSingleLine"
-        >
-          Yash &amp; Misha
-        </h1>
-
-        <!-- Compact 24px Tall Ornamental Divider -->
-        <div id="hero-line-3" class="hero-reveal-item flex flex-col items-center mt-0.5">
-          <img
-            src="./divider.webp"
-            alt=""
-            class="h-[24px] w-auto object-contain block mx-auto"
-            data-decorative-divider="true"
-          />
-          <svg class="hidden h-[14px] w-[140px] mx-auto text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-            <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-            <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-          </svg>
-
-          <!-- Crisp Luminous Gold Hashtag Pill Above Spire (z-[8]) -->
-          <div class="hero-hashtag-pill mt-1.5 px-3.5 py-0.5 rounded-full inline-flex items-center justify-center">
-            <span class="font-serif-ed font-semibold text-[0.98rem] tracking-[0.12em]" data-i18n="heroHashtag">
-              #YashMeGhuliMishri
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Interactive Gold Pill CTA Button ("Tap to Play • light the diyas of Ayodhya") -->
+      <!-- Interactive Play Prompt Before Lighting Starts -->
       <div
-        id="tap-to-light-wrap"
-        class="absolute inset-x-0 z-[10] flex flex-col items-center px-5 transition-all duration-500"
-        style="bottom: calc(5.2rem + env(safe-area-inset-bottom, 0px));"
+        id="tap-to-light-prompt"
+        class="absolute inset-x-0 z-[6] flex flex-col items-center transition-opacity duration-500"
+        style="bottom: calc(5.6rem + env(safe-area-inset-bottom, 0px));"
       >
         <button
           type="button"
-          id="hero-play-btn"
-          class="hero-cta-glow px-5 py-3 rounded-full bg-gradient-to-b from-[#172549]/95 to-[#0b1329]/95 border-[1.5px] border-[#E8C97A] text-[#FCE9B5] text-[14px] sm:text-[15px] font-serif-ed italic tracking-wide flex items-center gap-2.5 hover:brightness-110 active:scale-95 transition-all cursor-pointer"
+          id="hero-play-trigger-btn"
+          class="px-5 py-2.5 rounded-full bg-[#0B1528]/90 border border-[#E8C97A]/75 text-[#F5DFA0] text-[14px] font-serif-ed italic tracking-wide shadow-[0_8px_24px_rgba(0,0,0,0.8)] backdrop-blur-md flex items-center gap-2.5 hover:bg-[#14223D] active:scale-95 transition-all cursor-pointer"
         >
-          <span class="w-7 h-7 rounded-full bg-gradient-to-br from-[#FCE9B5] via-[#E8C97A] to-[#B7882C] text-[#1A1205] flex items-center justify-center shrink-0 shadow-md">
-            <svg class="w-3.5 h-3.5 ml-0.5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M8 5v14l11-7z" />
+          <span class="w-6 h-6 rounded-full bg-gradient-to-br from-[#F5DFA0] to-[#C8A248] text-[#1A1205] flex items-center justify-center shadow">
+            <svg class="w-3.5 h-3.5 ml-0.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z"/>
             </svg>
           </span>
-          <span data-i18n="tapToPlayBtn">Tap to Play &bull; light the diyas of Ayodhya</span>
+          <span data-i18n="tapToLight">Tap Play to light the diyas of Ayodhya</span>
         </button>
       </div>
 
-      <!-- Bottom Gentle "Scroll down" Prompt -->
+      <!-- Hero Title Block Shifted Higher into the Upper Starry Sky -->
+      <div class="relative z-[5] pt-3 sm:pt-3.5 px-4 text-center flex flex-col items-center pointer-events-none">
+        <p id="hero-line-1" class="hero-text-hidden text-[14px] tracking-[0.04em] text-[#F4EFE6]/95 font-serif-ed mb-0.5 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]" data-i18n="heroWelcome">
+          Welcome to the wedding of
+        </p>
+
+        <div id="hero-line-2" class="hero-text-hidden flex flex-col items-center leading-[0.88] my-0">
+          <span class="font-script text-[2.85rem] sm:text-[3rem] text-[#F3D88C]" data-i18n="groomFirst">Yash</span>
+          <span class="font-script text-[1.4rem] text-[#E8C97A] -my-1.5">&amp;</span>
+          <span class="font-script text-[2.85rem] sm:text-[3rem] text-[#F3D88C]" data-i18n="brideFirst">Misha</span>
+        </div>
+
+        <div id="hero-line-3" class="hero-text-hidden flex flex-col items-center mt-0.5">
+          <img
+            src="./divider.webp"
+            alt=""
+            class="w-[136px] h-auto block mx-auto"
+          />
+          <p class="hero-hashtag mt-1 font-serif-ed px-3 py-0.5 rounded-full bg-[#081326]/55 border border-[#E8C97A]/30" data-i18n="ayodhyaCaps">
+            #YashMeGhuliMishri
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom "Scroll down" Script Cue -->
       <div
         id="hero-scroll-cue"
-        class="hero-reveal-item absolute inset-x-0 z-[8] flex flex-col items-center pointer-events-none"
-        style="bottom: calc(1.35rem + env(safe-area-inset-bottom, 0px));"
+        class="hero-text-hidden absolute inset-x-0 z-[5] flex flex-col items-center pointer-events-none"
+        style="bottom: calc(1.75rem + env(safe-area-inset-bottom, 0px));"
       >
-        <span class="font-script text-[1.7rem] text-[#FCE9B5]/95 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)]" data-i18n="scrollDown">
-          Scroll down
-        </span>
-        <svg class="w-4 h-4 text-[#E8C97A] chevron-bounce -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6" />
+        <span class="font-script text-[1.75rem] text-[#F4EFE6]/95 tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" data-i18n="scrollDown">Scroll down</span>
+        <svg class="w-4 h-4 text-[#E8C97A] chevron-bounce -mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 9l6 6 6-6"/>
         </svg>
       </div>
     </section>
 
     <!-- =================================================================== -->
-    <!-- SEAMLESS INDIGO HANDMADE PAPER BODY (./paper.webp over #0c1328)     -->
+    <!-- SEAMLESS INDIGO HANDMADE PAPER BODY (paper.webp)                    -->
     <!-- =================================================================== -->
     <div class="indigo-paper relative z-10 pb-14">
 
       <!-- ================================================================= -->
-      <!-- SECTION 2: THE DATE — 4 CIRCULAR GOLD-FOIL SCRATCH COINS          -->
+      <!-- SECTION 2: THE DATE — 3 GOLD FOIL SCRATCH CARDS                   -->
       <!-- ================================================================= -->
-      <section id="section-date" class="pt-11 pb-9 px-5 text-center">
+      <section id="section-date" class="pt-10 pb-8 px-6 text-center">
         <h2 class="font-script text-[2.85rem] leading-none" data-i18n="theDateHeading">The Date</h2>
-        <div class="ornate-divider-wrap mb-5">
-          <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-          <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-            <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-            <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-          </svg>
-        </div>
+        <img
+          src="./divider.webp"
+          alt=""
+          class="ornate-divider-img mb-5"
+        />
 
-        <p class="text-[1.06rem] text-[#F6F0E4]/95 tracking-wide flex items-center justify-center gap-2 mb-7">
-          <span class="text-[#E8C97A] text-xs">✦</span>
-          <span data-i18n="scratchPrompt">Scratch or tap each gold coin to reveal</span>
-          <span class="text-[#E8C97A] text-xs">✦</span>
+        <p class="text-[1.08rem] text-[#F4EFE6] tracking-wide flex items-center justify-center gap-2 mb-7">
+          <span class="text-[#E8C97A] text-sm">✦</span>
+          <span data-i18n="scratchPrompt">Scratch to reveal the date</span>
+          <span class="text-[#E8C97A] text-sm">✦</span>
         </p>
 
-        <!-- 4 Circular Gold-Foil Scratch Coins: 13 | 14 | DEC | 2026 -->
-        <div class="grid grid-cols-4 gap-2.5 max-w-[356px] mx-auto items-start justify-items-center">
-          <!-- Coin 1: 13 -->
+        <!-- 3 Ivory-Framed Metallic Gold Scratch Cards -->
+        <div class="flex items-center justify-center gap-3.5 max-w-[355px] mx-auto">
+          <!-- DAY -->
           <div class="flex flex-col items-center">
-            <div class="scratch-coin-ring">
-              <div class="scratch-coin-inner">
-                <span class="font-serif-ed text-[1.65rem] font-bold leading-none">13</span>
-                <span class="text-[9px] font-ui uppercase tracking-[0.14em] font-semibold opacity-75 mt-0.5" data-i18n="coinSun">SUN</span>
-                <canvas class="scratch-coin-canvas absolute inset-0 w-full h-full rounded-full cursor-pointer touch-none" data-coin="13" aria-label="Scratch coin 13"></canvas>
+            <div class="scratch-card-frame">
+              <div class="scratch-card-inner">
+                <span class="font-serif-ed text-[1.75rem] font-bold leading-none">13 &amp; 14</span>
+                <span class="text-[10px] uppercase tracking-[0.16em] mt-1 font-semibold opacity-80">Sun &amp; Mon</span>
+                <canvas class="scratch-foil-canvas absolute inset-0 w-full h-full cursor-pointer touch-none" data-card="day"></canvas>
               </div>
             </div>
-            <span class="mt-2 text-[10px] font-ui tracking-[0.18em] uppercase text-[#B9C4DC]" data-i18n="coinDay1">DAY 1</span>
+            <span class="mt-2.5 text-[11px] tracking-[0.24em] uppercase text-[#B8C2D8]" data-i18n="dayLabel">DAY</span>
           </div>
 
-          <!-- Coin 2: 14 -->
+          <!-- MONTH -->
           <div class="flex flex-col items-center">
-            <div class="scratch-coin-ring">
-              <div class="scratch-coin-inner">
-                <span class="font-serif-ed text-[1.65rem] font-bold leading-none">14</span>
-                <span class="text-[9px] font-ui uppercase tracking-[0.14em] font-semibold opacity-75 mt-0.5" data-i18n="coinMon">MON</span>
-                <canvas class="scratch-coin-canvas absolute inset-0 w-full h-full rounded-full cursor-pointer touch-none" data-coin="14" aria-label="Scratch coin 14"></canvas>
+            <div class="scratch-card-frame">
+              <div class="scratch-card-inner">
+                <span class="font-serif-ed text-[1.95rem] font-bold leading-none">Dec</span>
+                <span class="text-[10px] uppercase tracking-[0.16em] mt-1 font-semibold opacity-80">December</span>
+                <canvas class="scratch-foil-canvas absolute inset-0 w-full h-full cursor-pointer touch-none" data-card="month"></canvas>
               </div>
             </div>
-            <span class="mt-2 text-[10px] font-ui tracking-[0.18em] uppercase text-[#B9C4DC]" data-i18n="coinDay2">DAY 2</span>
+            <span class="mt-2.5 text-[11px] tracking-[0.24em] uppercase text-[#B8C2D8]" data-i18n="monthLabel">MONTH</span>
           </div>
 
-          <!-- Coin 3: DEC -->
+          <!-- YEAR -->
           <div class="flex flex-col items-center">
-            <div class="scratch-coin-ring">
-              <div class="scratch-coin-inner">
-                <span class="font-serif-ed text-[1.45rem] font-bold leading-none tracking-wide" data-i18n="coinDecVal">DEC</span>
-                <span class="text-[8.5px] font-ui uppercase tracking-[0.12em] font-semibold opacity-75 mt-0.5" data-i18n="coinMonthSub">WINTER</span>
-                <canvas class="scratch-coin-canvas absolute inset-0 w-full h-full rounded-full cursor-pointer touch-none" data-coin="DEC" aria-label="Scratch coin DEC"></canvas>
+            <div class="scratch-card-frame">
+              <div class="scratch-card-inner">
+                <span class="font-serif-ed text-[1.95rem] font-bold leading-none">2026</span>
+                <span class="text-[10px] uppercase tracking-[0.16em] mt-1 font-semibold opacity-80">Vikram 2083</span>
+                <canvas class="scratch-foil-canvas absolute inset-0 w-full h-full cursor-pointer touch-none" data-card="year"></canvas>
               </div>
             </div>
-            <span class="mt-2 text-[10px] font-ui tracking-[0.18em] uppercase text-[#B9C4DC]" data-i18n="monthLabel">MONTH</span>
-          </div>
-
-          <!-- Coin 4: 2026 -->
-          <div class="flex flex-col items-center">
-            <div class="scratch-coin-ring">
-              <div class="scratch-coin-inner">
-                <span class="font-serif-ed text-[1.42rem] font-bold leading-none">2026</span>
-                <span class="text-[8px] font-ui uppercase tracking-[0.1em] font-semibold opacity-75 mt-0.5">VS 2083</span>
-                <canvas class="scratch-coin-canvas absolute inset-0 w-full h-full rounded-full cursor-pointer touch-none" data-coin="2026" aria-label="Scratch coin 2026"></canvas>
-              </div>
-            </div>
-            <span class="mt-2 text-[10px] font-ui tracking-[0.18em] uppercase text-[#B9C4DC]" data-i18n="yearLabel">YEAR</span>
+            <span class="mt-2.5 text-[11px] tracking-[0.24em] uppercase text-[#B8C2D8]" data-i18n="yearLabel">YEAR</span>
           </div>
         </div>
       </section>
 
       <!-- ================================================================= -->
-      <!-- SECTION 3: ॥ जय सियाराम ॥ BLESSING CARD (First-Name-Only)         -->
+      <!-- SECTION 3: ROYAL RAM DARBAR INVITATION CARD                       -->
       <!-- ================================================================= -->
-      <section id="section-blessing" class="py-8 px-4 text-center">
-        <div class="relative max-w-[384px] mx-auto pt-12 pb-11 px-5">
-          <!-- Double-Line Gold Cusped Mughal Arch Frame -->
+      <section id="section-card" class="py-8 px-4 text-center">
+        <div class="relative max-w-[382px] mx-auto pt-12 pb-10 px-5">
+          <!-- Thin Double-Line Gold Cusped Mughal/Rajput Arch SVG Frame -->
           <svg
-            viewBox="0 0 380 800"
+            viewBox="0 0 380 790"
             fill="none"
             preserveAspectRatio="none"
             class="absolute inset-0 w-full h-full pointer-events-none"
             aria-hidden="true"
           >
+            <defs>
+              <path id="topArcPath" d="M 18,60 A 42,42 0 1,1 102,60" />
+              <path id="bottomArcPath" d="M 102,60 A 42,42 0 1,1 18,60" />
+            </defs>
+            <!-- Outer Cusped Arch -->
             <path
               d="M 190 12
-                 C 206 32, 224 38, 240 52
-                 C 248 66, 268 72, 282 88
-                 C 295 106, 322 115, 336 138
-                 C 350 160, 366 178, 366 208
-                 L 366 784
-                 L 14 784
-                 L 14 208
-                 C 14 178, 30 160, 44 138
-                 C 58 115, 85 106, 98 88
-                 C 112 72, 132 66, 140 52
-                 C 156 38, 174 32, 190 12 Z"
-              stroke="#C89F4C"
-              stroke-width="1.25"
-              stroke-opacity="0.82"
-            />
-            <path
-              d="M 190 24
-                 C 204 42, 220 48, 234 60
-                 C 242 74, 260 80, 274 95
-                 C 286 112, 312 120, 325 142
-                 C 338 163, 354 180, 354 208
-                 L 354 772
-                 L 26 772
-                 L 26 208
-                 C 26 180, 42 163, 55 142
-                 C 68 120, 94 112, 106 95
-                 C 120 80, 138 74, 146 60
-                 C 160 48, 176 42, 190 24 Z"
-              stroke="#C89F4C"
-              stroke-width="0.75"
-              stroke-opacity="0.50"
-            />
-          </svg>
-
-          <!-- Ram Darbar Blessing Artwork (./blessing.webp) -->
-          <div class="relative z-10 mt-6 mb-3 flex justify-center">
-            <img
-              src="./blessing.webp"
-              alt="Shri Ram Darbar Blessing"
-              class="w-[186px] h-auto block drop-shadow-[0_12px_26px_rgba(0,0,0,0.65)]"
-              data-hide-on-error="true"
-            />
-          </div>
-
-          <!-- ॥ जय सियाराम ॥ -->
-          <p class="relative z-10 font-hindi text-[1.2rem] font-medium text-[#FCE9B5] tracking-[0.06em] mt-2 mb-4">
-            ॥ जय सियाराम ॥
-          </p>
-
-          <!-- Circular Couple Monogram Seal (YM) -->
-          <div class="relative z-10 my-4 flex justify-center">
-            <svg viewBox="0 0 120 120" class="w-[88px] h-[88px]" aria-label="Yash and Misha monogram seal">
-              <circle cx="60" cy="60" r="56" fill="rgba(10, 17, 36, 0.5)" stroke="#C89F4C" stroke-width="1.15" />
-              <circle cx="60" cy="60" r="50" fill="none" stroke="#C89F4C" stroke-width="0.7" stroke-opacity="0.65" />
-              <circle cx="60" cy="60" r="34" fill="none" stroke="#C89F4C" stroke-width="0.6" stroke-opacity="0.45" />
-              <text fill="#E8C97A" font-size="7.2" font-family="'Cormorant Garamond', serif" font-weight="600" letter-spacing="2.2">
-                <textPath href="#sealTopArc" startOffset="50%" text-anchor="middle">
-                  YASH &amp; MISHA
-                </textPath>
-              </text>
-              <text fill="#E8C97A" font-size="7.8" font-family="'Noto Serif Devanagari', serif" letter-spacing="1.4">
-                <textPath href="#sealBottomArc" startOffset="50%" text-anchor="middle">
-                  यश • मिशा
-                </textPath>
-              </text>
-              <text x="60" y="64" text-anchor="middle" fill="#FCE9B5" font-family="'Cormorant Garamond', serif" font-size="25" font-weight="600" letter-spacing="1">
-                YM
-              </text>
-              <text x="60" y="76" text-anchor="middle" fill="#E8C97A" font-family="'Cormorant Garamond', serif" font-size="7.2" letter-spacing="1.4">
-                13–14.12.2026
-              </text>
-            </svg>
-          </div>
-
-          <!-- Traditional Blessing Copy -->
-          <p class="relative z-10 italic text-[1.15rem] leading-relaxed text-[#B9C4DC] max-w-[272px] mx-auto mb-5" data-i18n="eldersBlessing">
-            With the divine grace of Shri Ram &amp; the blessings of our elders,<br />you are warmly invited to the wedding of
-          </p>
-
-          <!-- Groom (First-Name-Only Presentation) -->
-          <h3 class="relative z-10 font-script text-[3.15rem] leading-[1.06] text-[#FCE9B5]" data-i18n="groomFirst">
-            Yash
-          </h3>
-          <p class="relative z-10 mt-2 text-[11.5px] uppercase tracking-[0.17em] text-[#B9C4DC] leading-relaxed" data-i18n="groomParents">
-            SON OF<br />SMT. PRIYA &amp;<br />SHRI RAM PRAKASH AGARWAL
-          </p>
-
-          <!-- "with" -->
-          <p class="relative z-10 font-script text-[2.2rem] text-[#E8C97A] my-2.5" data-i18n="withScript">
-            with
-          </p>
-
-          <!-- Bride (First-Name-Only Presentation) -->
-          <h3 class="relative z-10 font-script text-[3.15rem] leading-[1.06] text-[#FCE9B5]" data-i18n="brideFirst">
-            Misha
-          </h3>
-          <p class="relative z-10 mt-2 text-[11.5px] uppercase tracking-[0.17em] text-[#B9C4DC] leading-relaxed" data-i18n="brideParents">
-            DAUGHTER OF<br />SMT. HIMANI GOYAL &amp;<br />SHRI PEEYUSH GOYAL
-          </p>
-
-          <!-- Date & Saga Line -->
-          <div class="relative z-10 mt-7 pt-2">
-            <p class="font-serif-ed text-[1.32rem] font-semibold text-[#F6F0E4]" data-i18n="cardMainDate">
-              13th &amp; 14th December 2026
-            </p>
-            <p class="font-serif-ed italic text-[1.06rem] text-[#E8C97A] mt-1" data-i18n="cardMainVenue">
-              Jaipur, Rajasthan &bull; #YashMeGhuliMishri
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================================================================= -->
-      <!-- SECTION 4: OUR STORY — MILESTONE CARDS WITH 4-POINT GOLD DIAMONDS -->
-      <!-- ================================================================= -->
-      <section id="section-story" class="py-10 px-6 text-center">
-        <h2 class="font-script text-[2.85rem] leading-none" data-i18n="ourStoryHeading">Our Story</h2>
-        <div class="ornate-divider-wrap mb-6">
-          <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-          <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-            <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-            <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-          </svg>
-        </div>
-
-        <p class="text-[1.12rem] leading-[1.68] text-[#F6F0E4]/95 max-w-[342px] mx-auto mb-8" data-i18n="storyIntro">
-          It all started on day one of college. A single glance sparked an instant connection, and as we navigated a new chapter of life, we found our missing puzzle pieces in one another. Seven years of growth, laughter, and love later, our greatest adventure begins.
-        </p>
-
-        <!-- Vertical Gold Timeline with Custom 4-Point Diamond Markers & Subtle Milestone Cards -->
-        <div class="relative max-w-[345px] mx-auto text-left pl-8 space-y-5">
-          <div class="absolute left-[7px] top-4 bottom-4 w-[1px] bg-gradient-to-b from-[#E8C97A]/80 via-[#C89F4C]/55 to-[#E8C97A]/80"></div>
-
-          <!-- Milestone 1 -->
-          <div class="relative rounded-2xl bg-[#131d39]/70 border border-[#C89F4C]/30 p-4 shadow-lg backdrop-blur-sm">
-            <svg class="gold-diamond-4pt absolute -left-[33px] top-5 drop-shadow-[0_0_6px_rgba(252,233,181,0.55)]" aria-hidden="true">
-              <use href="#diamond-4pt" />
-            </svg>
-            <h3 class="font-script text-[2rem] leading-none text-[#FCE9B5]" data-i18n="m1Title">July 2019</h3>
-            <p class="text-[1.06rem] text-[#B9C4DC] mt-1.5 leading-snug" data-i18n="m1Desc">
-              When two different worlds crossed paths by chance on day one of college.
-            </p>
-          </div>
-
-          <!-- Milestone 2 -->
-          <div class="relative rounded-2xl bg-[#131d39]/70 border border-[#C89F4C]/30 p-4 shadow-lg backdrop-blur-sm">
-            <svg class="gold-diamond-4pt absolute -left-[33px] top-5 drop-shadow-[0_0_6px_rgba(252,233,181,0.55)]" aria-hidden="true">
-              <use href="#diamond-4pt" />
-            </svg>
-            <h3 class="font-script text-[2rem] leading-none text-[#FCE9B5]" data-i18n="m2Title">2020</h3>
-            <p class="text-[1.06rem] text-[#B9C4DC] mt-1.5 leading-snug" data-i18n="m2Desc">
-              The world paused, but our bond only grew stronger through every call and mile.
-            </p>
-          </div>
-
-          <!-- Milestone 3 -->
-          <div class="relative rounded-2xl bg-[#131d39]/70 border border-[#C89F4C]/30 p-4 shadow-lg backdrop-blur-sm">
-            <svg class="gold-diamond-4pt absolute -left-[33px] top-5 drop-shadow-[0_0_6px_rgba(252,233,181,0.55)]" aria-hidden="true">
-              <use href="#diamond-4pt" />
-            </svg>
-            <h3 class="font-script text-[2rem] leading-none text-[#FCE9B5]" data-i18n="m3Title">2025</h3>
-            <p class="text-[1.06rem] text-[#B9C4DC] mt-1.5 leading-snug" data-i18n="m3Desc">
-              Families united, hearts aligned, and a sweet “yes” sealed over mithai.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================================================================= -->
-      <!-- SECTION 5: OUR GALLERY — 7 LOCAL DSC PHOTOS IN MUGHAL ARCH SLIDER -->
-      <!-- ================================================================= -->
-      <section id="section-gallery" class="py-10">
-        <div class="px-6 text-center">
-          <h2 class="font-script text-[2.85rem] leading-none" data-i18n="galleryHeading">Our Gallery</h2>
-          <div class="ornate-divider-wrap mb-6">
-            <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-            <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-              <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-              <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-              <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            </svg>
-          </div>
-        </div>
-
-        <!-- Horizontal Mughal Arch Slider with Prev/Next Controls -->
-        <div class="relative">
-          <!-- Prev Arrow -->
-          <button
-            type="button"
-            id="gallery-prev-btn"
-            aria-label="Previous photo"
-            class="absolute left-2.5 top-[148px] z-20 w-10 h-10 rounded-full bg-[#0c1328]/88 border border-[#E8C97A]/70 text-[#FCE9B5] flex items-center justify-center shadow-lg backdrop-blur-md active:scale-90 transition-all cursor-pointer"
-          >
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6" />
-            </svg>
-          </button>
-
-          <!-- Next Arrow -->
-          <button
-            type="button"
-            id="gallery-next-btn"
-            aria-label="Next photo"
-            class="absolute right-2.5 top-[148px] z-20 w-10 h-10 rounded-full bg-[#0c1328]/88 border border-[#E8C97A]/70 text-[#FCE9B5] flex items-center justify-center shadow-lg backdrop-blur-md active:scale-90 transition-all cursor-pointer"
-          >
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6" />
-            </svg>
-          </button>
-
-          <!-- Track (Rendered dynamically with all 7 exact local DSC filenames) -->
-          <div
-            id="gallery-track"
-            class="flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory px-[88px] sm:px-[92px] pb-3 scroll-smooth"
-          >
-            <!-- Gallery slides injected cleanly by JS using ./DSC01036.jpg through ./DSC01536.jpg -->
-          </div>
-        </div>
-
-        <!-- Clickable Dot Indicators -->
-        <div id="gallery-dots" class="flex items-center justify-center gap-2 mt-2" aria-label="Gallery slide indicators"></div>
-
-        <p class="text-center italic text-[0.94rem] text-[#B9C4DC]/80 mt-2.5" data-i18n="swipeHint">
-          Swipe or tap arrows to explore
-        </p>
-      </section>
-
-      <!-- ================================================================= -->
-      <!-- SECTION 6: CHAPTERS OF OUR SAGA — 16-CHAPTER ITINERARY & .ICS     -->
-      <!-- ================================================================= -->
-      <section id="section-celebrations" class="py-10 px-4">
-        <div class="text-center mb-6">
-          <h2 class="font-script text-[2.7rem] leading-none" data-i18n="chaptersHeading">Chapters of Our Saga</h2>
-          <div class="ornate-divider-wrap mb-5">
-            <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-            <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-              <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-              <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-              <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            </svg>
-          </div>
-
-          <!-- Day & View Filter Tabs -->
-          <div class="inline-flex flex-wrap items-center justify-center gap-1 p-1 rounded-full bg-[#091024]/90 border border-[#C89F4C]/40 text-[11px] font-ui uppercase tracking-[0.08em]">
-            <button type="button" data-view-mode="highlights" class="saga-view-tab px-3 py-1.5 rounded-full bg-[#C89F4C]/30 text-[#FCE9B5] font-semibold transition-all cursor-pointer" data-i18n="tabHighlights">
-              Highlights
-            </button>
-            <button type="button" data-view-mode="all" class="saga-view-tab px-3 py-1.5 rounded-full text-[#B9C4DC] hover:text-[#F6F0E4] transition-all cursor-pointer" data-i18n="tabAll16">
-              All 16
-            </button>
-            <button type="button" data-view-mode="day1" class="saga-view-tab px-3 py-1.5 rounded-full text-[#B9C4DC] hover:text-[#F6F0E4] transition-all cursor-pointer" data-i18n="tabDay1">
-              Dec 13
-            </button>
-            <button type="button" data-view-mode="day2" class="saga-view-tab px-3 py-1.5 rounded-full text-[#B9C4DC] hover:text-[#F6F0E4] transition-all cursor-pointer" data-i18n="tabDay2">
-              Dec 14
-            </button>
-          </div>
-        </div>
-
-        <!-- VIEW A: 3-MANDAP VISUAL HIGHLIGHTS (./fn-mehendi.webp, ./fn-sangeet.webp, ./fn-wedding.webp) -->
-        <div id="celebrations-highlights-view" class="relative max-w-[388px] mx-auto py-3">
-          <div class="absolute left-1/2 top-4 bottom-4 -translate-x-1/2 w-[1px] bg-[#C89F4C]/45"></div>
-
-          <!-- Highlight 1: Mehendi / Bhaat & Chak -->
-          <div class="relative grid grid-cols-2 items-center gap-3 mb-12">
-            <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rotate-45 bg-[#0c1328] border border-[#FCE9B5] z-10"></span>
-            <div class="pr-3 flex justify-center">
-              <img
-                src="./fn-mehendi.webp"
-                alt="Mehendi, Bhaat & Chak Celebrations"
-                class="w-[152px] h-auto block drop-shadow-[0_12px_20px_rgba(0,0,0,0.55)]"
-                data-hide-on-error="true"
-              />
-            </div>
-            <div class="pl-4 text-left">
-              <p class="text-[10.5px] font-ui uppercase tracking-[0.18em] text-[#B9C4DC]" data-i18n="hlDate1">SUN, 13 DEC</p>
-              <p class="font-script text-[2.15rem] leading-tight text-[#84D29B] mt-0.5">1:15 pm</p>
-              <h3 class="font-serif-ed text-[1.32rem] font-semibold text-[#F6F0E4] leading-snug" data-i18n="hl1Title">Bhaat री Reet &amp; Chak</h3>
-              <p class="font-hindi text-[0.94rem] text-[#E8C97A]">भात री रीत एवं चाक</p>
-              <p class="italic text-[0.98rem] text-[#B9C4DC] mt-1 leading-snug" data-i18n="hl1Desc">
-                When nanihal arrives &amp; holy rituals begin
-              </p>
-              <button type="button" data-ics="bhaat" class="ics-btn mt-2 inline-block text-[0.94rem] italic text-[#FCE9B5] underline underline-offset-4 hover:text-[#E8C97A] cursor-pointer" data-i18n="addToCal">
-                Add to calendar
-              </button>
-            </div>
-          </div>
-
-          <!-- Highlight 2: Sangeet & Ring Affair -->
-          <div class="relative grid grid-cols-2 items-center gap-3 mb-12">
-            <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rotate-45 bg-[#0c1328] border border-[#FCE9B5] z-10"></span>
-            <div class="pr-4 text-right">
-              <p class="text-[10.5px] font-ui uppercase tracking-[0.18em] text-[#B9C4DC]" data-i18n="hlDate1">SUN, 13 DEC</p>
-              <p class="font-script text-[2.15rem] leading-tight text-[#D6B4FC] mt-0.5">6:15 pm</p>
-              <h3 class="font-serif-ed text-[1.32rem] font-semibold text-[#F6F0E4] leading-snug" data-i18n="hl2Title">Jashn - E - Ishq</h3>
-              <p class="font-hindi text-[0.94rem] text-[#E8C97A]">संगीत एवं रिंग सेरेमनी</p>
-              <p class="italic text-[0.98rem] text-[#B9C4DC] mt-1 leading-snug" data-i18n="hl2Desc">
-                The Ring Affair, Sangeet &amp; मनुहार Supper
-              </p>
-              <button type="button" data-ics="jashn" class="ics-btn mt-2 inline-block text-[0.94rem] italic text-[#FCE9B5] underline underline-offset-4 hover:text-[#E8C97A] cursor-pointer" data-i18n="addToCal">
-                Add to calendar
-              </button>
-            </div>
-            <div class="pl-3 flex justify-center">
-              <img
-                src="./fn-sangeet.webp"
-                alt="Jashn-E-Ishq Sangeet Night"
-                class="w-[152px] h-auto block drop-shadow-[0_12px_20px_rgba(0,0,0,0.55)]"
-                data-hide-on-error="true"
-              />
-            </div>
-          </div>
-
-          <!-- Highlight 3: Wedding & Saat Vachan -->
-          <div class="relative grid grid-cols-2 items-center gap-3">
-            <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rotate-45 bg-[#0c1328] border border-[#FCE9B5] z-10"></span>
-            <div class="pr-3 flex justify-center">
-              <img
-                src="./fn-wedding.webp"
-                alt="Wedding Mandap & Saat Vachan"
-                class="w-[152px] h-auto block drop-shadow-[0_12px_20px_rgba(0,0,0,0.55)]"
-                data-hide-on-error="true"
-              />
-            </div>
-            <div class="pl-4 text-left">
-              <p class="text-[10.5px] font-ui uppercase tracking-[0.18em] text-[#B9C4DC]" data-i18n="hlDate2">MON, 14 DEC</p>
-              <p class="font-script text-[2.15rem] leading-tight text-[#F5C26B] mt-0.5">5:15 pm</p>
-              <h3 class="font-serif-ed text-[1.32rem] font-semibold text-[#F6F0E4] leading-snug" data-i18n="hl3Title">Wedding &amp; Saat Vachan</h3>
-              <p class="font-hindi text-[0.94rem] text-[#E8C97A]">विवाह एवं सात वचन</p>
-              <p class="italic text-[0.98rem] text-[#B9C4DC] mt-1 leading-snug" data-i18n="hl3Desc">
-                Pila Pyaar, Shahi Nikasi, Agwaani &amp; Wedding Feast
-              </p>
-              <button type="button" data-ics="saatvachan" class="ics-btn mt-2 inline-block text-[0.94rem] italic text-[#FCE9B5] underline underline-offset-4 hover:text-[#E8C97A] cursor-pointer" data-i18n="addToCal">
-                Add to calendar
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- VIEW B: ALL 16 CHAPTERS TIMELINE -->
-        <div id="celebrations-full-view" class="hidden max-w-[376px] mx-auto pt-2 space-y-8">
-          <!-- DAY 1: SUNDAY, DECEMBER 13, 2026 (Chapters 1–7) -->
-          <div id="saga-day1-group">
-            <div class="text-center mb-5">
-              <p class="text-[11px] font-ui uppercase tracking-[0.22em] text-[#FCE9B5] font-semibold" data-i18n="day1Header">
-                SUNDAY, 13 DECEMBER &bull; CHAPTERS 1–7
-              </p>
-            </div>
-            <div id="day1-chapters-list" class="relative pl-6 border-l border-[#C89F4C]/45 space-y-5 text-left"></div>
-          </div>
-
-          <!-- DAY 2: MONDAY, DECEMBER 14, 2026 (Chapters 8–16) -->
-          <div id="saga-day2-group">
-            <div class="text-center mb-5 pt-2">
-              <p class="text-[11px] font-ui uppercase tracking-[0.22em] text-[#FCE9B5] font-semibold" data-i18n="day2Header">
-                MONDAY, 14 DECEMBER &bull; CHAPTERS 8–16
-              </p>
-            </div>
-            <div id="day2-chapters-list" class="relative pl-6 border-l border-[#C89F4C]/45 space-y-5 text-left"></div>
-          </div>
-
-          <p class="mt-6 italic text-center text-[1.05rem] text-[#E8C97A] max-w-[332px] mx-auto leading-relaxed" data-i18n="sagaClosingQuote">
-            “Rishton ki garmahat, apno ka ashirwad, aur ek naye safar ki shuruat — thank you for pouring your love into our saga.”
-          </p>
-        </div>
-      </section>
-
-      <!-- ================================================================= -->
-      <!-- SECTION 7: LIVE COUNTDOWN (DEC 13, 2026 09:00 IST) + 11 DIYAS     -->
-      <!-- ================================================================= -->
-      <section id="section-countdown" class="py-10 px-6 text-center">
-        <h2 class="font-script text-[2.75rem] leading-none" data-i18n="countdownHeading">The Celebration Begins</h2>
-        <div class="ornate-divider-wrap mb-7">
-          <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-          <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-            <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-            <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-          </svg>
-        </div>
-
-        <div class="flex items-baseline justify-center gap-2 sm:gap-3.5 max-w-[360px] mx-auto">
-          <div class="flex flex-col items-center min-w-[62px]">
-            <span id="cd-days" class="font-serif-ed text-[2.65rem] font-semibold text-[#FCE9B5] leading-none tabular-nums">00</span>
-            <span class="text-[0.88rem] text-[#B9C4DC] mt-1.5" data-i18n="daysLbl">Days</span>
-          </div>
-          <span class="font-serif-ed text-[1.95rem] text-[#C89F4C] -translate-y-3">:</span>
-          <div class="flex flex-col items-center min-w-[62px]">
-            <span id="cd-hours" class="font-serif-ed text-[2.65rem] font-semibold text-[#FCE9B5] leading-none tabular-nums">00</span>
-            <span class="text-[0.88rem] text-[#B9C4DC] mt-1.5" data-i18n="hoursLbl">Hours</span>
-          </div>
-          <span class="font-serif-ed text-[1.95rem] text-[#C89F4C] -translate-y-3">:</span>
-          <div class="flex flex-col items-center min-w-[62px]">
-            <span id="cd-mins" class="font-serif-ed text-[2.65rem] font-semibold text-[#FCE9B5] leading-none tabular-nums">00</span>
-            <span class="text-[0.88rem] text-[#B9C4DC] mt-1.5" data-i18n="minsLbl">Minutes</span>
-          </div>
-          <span class="font-serif-ed text-[1.95rem] text-[#C89F4C] -translate-y-3">:</span>
-          <div class="flex flex-col items-center min-w-[62px]">
-            <span id="cd-secs" class="font-serif-ed text-[2.65rem] font-semibold text-[#FCE9B5] leading-none tabular-nums">00</span>
-            <span class="text-[0.88rem] text-[#B9C4DC] mt-1.5" data-i18n="secsLbl">Seconds</span>
-          </div>
-        </div>
-
-        <p class="italic text-[1.05rem] text-[#B9C4DC] mt-5 mb-7" data-i18n="countdownSub">
-          until the auspicious celebrations begin on Sunday, 13 December 2026
-        </p>
-
-        <!-- 11 Glowing Miniature Diyas -->
-        <div class="flex items-center justify-center gap-1.5 max-w-[365px] mx-auto" aria-hidden="true">
-          <svg class="w-7 h-7 flame-flicker"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.20s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.42s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.12s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.54s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.30s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.16s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.48s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.26s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.38s"><use href="#single-diya" /></svg>
-          <svg class="w-7 h-7 flame-flicker" style="animation-delay:0.08s"><use href="#single-diya" /></svg>
-        </div>
-      </section>
-
-      <!-- ================================================================= -->
-      <!-- SECTION 8: LOCATION & GETTING THERE (JAIPUR, RAJASTHAN)           -->
-      <!-- ================================================================= -->
-      <section id="section-location" class="py-10 text-center">
-        <div class="px-6">
-          <h2 class="font-script text-[2.85rem] leading-none" data-i18n="locationHeading">Location</h2>
-          <div class="ornate-divider-wrap mb-5">
-            <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-            <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-              <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-              <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-              <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            </svg>
-          </div>
-
-          <p class="text-[0.92rem] font-ui uppercase tracking-[0.26em] text-[#E8C97A] font-semibold" data-i18n="venueCityCaps">
-            JAIPUR, RAJASTHAN
-          </p>
-          <h3 class="font-serif-ed text-[1.68rem] font-semibold text-[#F6F0E4] mt-1" data-i18n="venueName">
-            Balaji Resort &amp; Banquet Hall
-          </h3>
-          <p class="text-[1.06rem] text-[#B9C4DC] max-w-[300px] mx-auto mt-1 leading-snug" data-i18n="venueAddr">
-            Kesar Nagar Chauraha, Sanganer, Barhmohanpura, Jaipur, Rajasthan
-          </p>
-        </div>
-
-        <!-- Venue Illustration (./venue.webp) -->
-        <div class="mt-6 mb-5 w-full overflow-hidden">
-          <img
-            src="./venue.webp"
-            alt="Jaipur Wedding Venue Illustration"
-            class="w-full h-auto block"
-            data-hide-on-error="true"
-          />
-        </div>
-
-        <!-- Interactive Map Toggle & Open in Google Maps -->
-        <div class="px-6 max-w-[372px] mx-auto">
-          <div class="relative w-full h-[190px] rounded-2xl overflow-hidden border border-[#C89F4C]/40 bg-[#1a2440] shadow-xl">
-            <div id="map-placeholder-view" class="absolute inset-0 flex flex-col items-center justify-center">
-              <svg viewBox="0 0 360 190" class="absolute inset-0 w-full h-full opacity-35" preserveAspectRatio="none" aria-hidden="true">
-                <rect width="360" height="190" fill="#1d2846" />
-                <path d="M 0 38 Q 110 75, 220 55 T 360 88" stroke="#7584A8" stroke-width="1.5" fill="none" />
-                <path d="M 55 0 Q 95 95, 165 190" stroke="#7584A8" stroke-width="1.2" fill="none" />
-                <path d="M 240 0 Q 210 85, 285 190" stroke="#7584A8" stroke-width="1.2" fill="none" />
-                <path d="M 0 138 Q 150 112, 360 150" stroke="#96A4C4" stroke-width="2" fill="none" />
-              </svg>
-
-              <svg class="relative z-10 w-8 h-8 text-[#E8C97A] mb-2.5 drop-shadow" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
-              </svg>
-
-              <button
-                type="button"
-                id="show-live-map-btn"
-                class="relative z-10 px-5 py-2 rounded-full bg-[#0c1328]/95 border border-[#E8C97A]/55 text-[#FCE9B5] font-serif-ed text-[1.02rem] shadow-md hover:bg-[#162347] active:scale-95 transition-all cursor-pointer"
-                data-i18n="showMapBtn"
-              >
-                Show the map
-              </button>
-            </div>
-
-            <iframe
-              id="google-map-iframe"
-              title="Balaji Resort & Banquet Hall, Jaipur Map"
-              class="hidden w-full h-full border-0"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              data-src="https://www.google.com/maps?q=Balaji+Resort+and+Banquet+Hall+Kesar+Nagar+Chauraha+Sanganer+Jaipur&output=embed"
-            ></iframe>
-          </div>
-
-          <a
-            href="https://maps.app.goo.gl/kLVBc7G5WwVjrzJN8"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-bronze-pill mt-4 w-full py-3.5 inline-flex items-center justify-center text-[0.9rem]"
-            data-i18n="openGoogleMaps"
-          >
-            OPEN IN GOOGLE MAPS
-          </a>
-        </div>
-
-        <!-- Getting There (Airport / Railway / Road — Strictly clean travel info) -->
-        <div id="section-travel" class="mt-12 px-6 text-center">
-          <h3 class="font-script text-[2.65rem] leading-none" data-i18n="gettingThereHeading">Getting There</h3>
-          <div class="ornate-divider-wrap mb-6">
-            <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-            <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-              <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-              <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-              <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            </svg>
-          </div>
-
-          <div class="max-w-[356px] mx-auto space-y-3 text-left">
-            <!-- By Air -->
-            <div class="rounded-2xl bg-[#131d39]/70 border border-[#C89F4C]/28 p-3.5 flex items-start gap-3">
-              <span class="w-9 h-9 rounded-full bg-[#C89F4C]/18 border border-[#E8C97A]/40 text-[#FCE9B5] flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
-                </svg>
-              </span>
-              <div>
-                <p class="font-serif-ed text-[1.12rem] font-semibold text-[#FCE9B5]" data-i18n="travelAirTitle">By Air</p>
-                <p class="text-[0.98rem] text-[#B9C4DC] leading-snug" data-i18n="airportInfo">
-                  Jaipur International Airport (JAI) is approximately 15 minutes from the venue.
-                </p>
-              </div>
-            </div>
-
-            <!-- By Train -->
-            <div class="rounded-2xl bg-[#131d39]/70 border border-[#C89F4C]/28 p-3.5 flex items-start gap-3">
-              <span class="w-9 h-9 rounded-full bg-[#C89F4C]/18 border border-[#E8C97A]/40 text-[#FCE9B5] flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2c-4 0-8 .5-8 4v9.5A3.5 3.5 0 0 0 7.5 19L6 20.5v.5h2l2-2h4l2 2h2v-.5L16.5 19a3.5 3.5 0 0 0 3.5-3.5V6c0-3.5-4-4-8-4zM7.5 17a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm9 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM18 11H6V6h12v5z" />
-                </svg>
-              </span>
-              <div>
-                <p class="font-serif-ed text-[1.12rem] font-semibold text-[#FCE9B5]" data-i18n="travelTrainTitle">By Rail</p>
-                <p class="text-[0.98rem] text-[#B9C4DC] leading-snug" data-i18n="trainInfo">
-                  Jaipur Junction Railway Station is approximately 25 minutes away via Tonk Road / Sanganer.
-                </p>
-              </div>
-            </div>
-
-            <!-- By Road -->
-            <div class="rounded-2xl bg-[#131d39]/70 border border-[#C89F4C]/28 p-3.5 flex items-start gap-3">
-              <span class="w-9 h-9 rounded-full bg-[#C89F4C]/18 border border-[#E8C97A]/40 text-[#FCE9B5] flex items-center justify-center shrink-0 mt-0.5">
-                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1h12v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-8l-2.08-5.99zM6.5 16a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm11 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 11l1.5-4.5h11L19 11H5z" />
-                </svg>
-              </span>
-              <div>
-                <p class="font-serif-ed text-[1.12rem] font-semibold text-[#FCE9B5]" data-i18n="travelRoadTitle">By Road</p>
-                <p class="text-[0.98rem] text-[#B9C4DC] leading-snug" data-i18n="roadInfo">
-                  Direct highway access via Tonk Road &amp; Ring Road to Kesar Nagar Chauraha, Sanganer with valet parking on site.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================================================================= -->
-      <!-- SECTION 9: DRESS CODE (./dress.webp + IVORY HALDI, SANGEET, WED)  -->
-      <!-- ================================================================= -->
-      <section id="section-dresscode" class="py-10 px-6">
-        <div class="text-center">
-          <h2 class="font-script text-[2.85rem] leading-none" data-i18n="dressCodeHeading">Dress Code</h2>
-          <div class="ornate-divider-wrap mb-5">
-            <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-            <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-              <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-              <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-              <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            </svg>
-          </div>
-          <p class="text-[1.1rem] text-[#B9C4DC] max-w-[275px] mx-auto leading-snug" data-i18n="dressCodeSub">
-            A curated palette for our celebrations, if you’d like a festive hint.
-          </p>
-        </div>
-
-        <!-- Dress Code Illustration (./dress.webp) -->
-        <div class="mt-4 mb-6 flex justify-center">
-          <img
-            src="./dress.webp"
-            alt="Wedding Dress Code Illustration"
-            class="w-full max-w-[356px] h-auto block drop-shadow-[0_12px_22px_rgba(0,0,0,0.48)]"
-            data-hide-on-error="true"
-          />
-        </div>
-
-        <!-- Curated Attire Rows -->
-        <div class="max-w-[358px] mx-auto border-t border-[#C89F4C]/30 divide-y divide-[#C89F4C]/25 border-b">
-          <!-- Look 1: Ivory Haldi -->
-          <div class="py-4 flex items-center justify-between gap-3">
-            <div>
-              <h3 class="font-serif-ed text-[1.32rem] font-semibold text-[#F6F0E4]">
-                <span data-i18n="dcTitleHaldi">Ivory Haldi</span>
-                <span class="font-hindi text-[1rem] text-[#E8C97A] font-normal ml-1.5">हल्दी</span>
-              </h3>
-              <p class="text-[1.02rem] text-[#B9C4DC] mt-0.5" data-i18n="dcHaldiDesc">
-                Shades of Ivory, Cream &amp; Soft Pearl
-              </p>
-            </div>
-            <div class="flex items-center gap-1.5 shrink-0" aria-label="Ivory Haldi colour swatches">
-              <span class="w-[26px] h-[26px] rounded-full bg-[#FFFFF0] shadow-md border border-[#D4AF37]/80" title="Pure Ivory"></span>
-              <span class="w-[26px] h-[26px] rounded-full bg-[#FAF4E4] shadow-md border border-[#D4AF37]/80" title="Warm Ivory"></span>
-              <span class="w-[26px] h-[26px] rounded-full bg-[#EFE4CE] shadow-md border border-[#D4AF37]/80" title="Pearl Cream"></span>
-            </div>
-          </div>
-
-          <!-- Look 2: Sangeet Glam -->
-          <div class="py-4 flex items-center justify-between gap-3">
-            <div>
-              <h3 class="font-serif-ed text-[1.32rem] font-semibold text-[#F6F0E4]">
-                <span data-i18n="dcTitleSangeet">Sangeet Glam</span>
-                <span class="font-hindi text-[1rem] text-[#E8C97A] font-normal ml-1.5">संगीत</span>
-              </h3>
-              <p class="text-[1.02rem] text-[#B9C4DC] mt-0.5" data-i18n="dcSangeetDesc">
-                Midnight Jewel Tones &amp; Cocktail Shimmer
-              </p>
-            </div>
-            <div class="flex items-center gap-1.5 shrink-0" aria-label="Sangeet Glam colour swatches">
-              <span class="w-[26px] h-[26px] rounded-full bg-[#1C2F66] shadow-md border border-[#D4AF37]/80" title="Royal Sapphire"></span>
-              <span class="w-[26px] h-[26px] rounded-full bg-[#5B2C6F] shadow-md border border-[#D4AF37]/80" title="Amethyst"></span>
-              <span class="w-[26px] h-[26px] rounded-full bg-[#0E6251] shadow-md border border-[#D4AF37]/80" title="Emerald"></span>
-            </div>
-          </div>
-
-          <!-- Look 3: Traditional Wedding -->
-          <div class="py-4 flex items-center justify-between gap-3">
-            <div>
-              <h3 class="font-serif-ed text-[1.32rem] font-semibold text-[#F6F0E4]">
-                <span data-i18n="dcTitleWedding">Traditional Wedding</span>
-                <span class="font-hindi text-[1rem] text-[#E8C97A] font-normal ml-1.5">विवाह</span>
-              </h3>
-              <p class="text-[1.02rem] text-[#B9C4DC] mt-0.5" data-i18n="dcWeddingDesc">
-                Royal Heritage Silks, Crimson &amp; Antique Gold
-              </p>
-            </div>
-            <div class="flex items-center gap-1.5 shrink-0" aria-label="Traditional Wedding colour swatches">
-              <span class="w-[26px] h-[26px] rounded-full bg-[#8B1E2D] shadow-md border border-[#D4AF37]/80" title="Regal Crimson"></span>
-              <span class="w-[26px] h-[26px] rounded-full bg-[#C89F4C] shadow-md border border-[#FCE9B5]/80" title="Antique Gold"></span>
-              <span class="w-[26px] h-[26px] rounded-full bg-[#B54B2A] shadow-md border border-[#D4AF37]/80" title="Marigold Sindoor"></span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================================================================= -->
-      <!-- SECTION 10: OUR FAMILIES                                          -->
-      <!-- ================================================================= -->
-      <section id="section-families" class="py-10 px-6 text-center">
-        <h2 class="font-script text-[2.85rem] leading-none" data-i18n="familiesHeading">Our Families</h2>
-        <div class="ornate-divider-wrap mb-7">
-          <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-          <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-            <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-            <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-          </svg>
-        </div>
-
-        <div class="space-y-7 max-w-[338px] mx-auto">
-          <div>
-            <p class="text-[11px] font-ui uppercase tracking-[0.22em] text-[#B9C4DC] mb-1.5" data-i18n="withBlessingsCaps">
-              WITH THE BLESSINGS OF
-            </p>
-            <p class="font-serif-ed text-[1.22rem] font-semibold text-[#F6F0E4] leading-snug" data-i18n="grandparentsGroom">
-              Smt. Sumitra Devi &amp;<br />Late Shri Balmukund Agarwal
-            </p>
-          </div>
-
-          <div>
-            <p class="text-[11px] font-ui uppercase tracking-[0.22em] text-[#B9C4DC] mb-1.5" data-i18n="eagerCaps">
-              EAGER TO SEE YOU
-            </p>
-            <p class="font-serif-ed text-[1.22rem] font-semibold text-[#F6F0E4]" data-i18n="familyGroomLine">
-              The Agarwal Family
-            </p>
-          </div>
-
-          <div>
-            <p class="text-[11px] font-ui uppercase tracking-[0.22em] text-[#B9C4DC] mb-1.5" data-i18n="waitingCaps">
-              WAITING TO WELCOME YOU
-            </p>
-            <p class="font-serif-ed text-[1.22rem] font-semibold text-[#F6F0E4]" data-i18n="waitingLine">
-              The Agarwal Parivaar
-            </p>
-          </div>
-
-          <div>
-            <p class="text-[11px] font-ui uppercase tracking-[0.22em] text-[#B9C4DC] mb-1.5" data-i18n="dontMissCaps">
-              DON’T YOU DARE MISS IT
-            </p>
-            <p class="font-serif-ed italic text-[1.22rem] text-[#FCE9B5] leading-snug" data-i18n="kidsQuote">
-              Mohit, Girdhar and Kashish say:<br />you must come to the wedding!
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================================================================= -->
-      <!-- FOOTER: GOLD SEAL, "OUR ETERNAL UNION SAGA" & DATE SIGN-OFF       -->
-      <!-- ================================================================= -->
-      <footer class="pt-6 pb-10 px-6 text-center">
-        <div class="ornate-divider-wrap mb-5">
-          <img src="./divider.webp" alt="" class="ornate-divider-img" data-decorative-divider="true" />
-          <svg class="hidden h-[14px] w-[150px] text-[#E8C97A]" viewBox="0 0 180 20" fill="none" aria-hidden="true">
-            <line x1="8" y1="10" x2="72" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-            <path d="M90 2 L96 10 L90 18 L84 10 Z" fill="#FCE9B5" />
-            <line x1="108" y1="10" x2="172" y2="10" stroke="currentColor" stroke-width="1" stroke-opacity="0.7" />
-          </svg>
-        </div>
-
-        <p class="font-serif-ed text-[1.16rem] text-[#F6F0E4]/95 leading-relaxed max-w-[260px] mx-auto" data-i18n="footerLove">
-          With love, the Agarwal family
-        </p>
-
-        <!-- Circular Gold Monogram Seal -->
-        <div class="my-6 flex justify-center">
-          <svg viewBox="0 0 120 120" class="w-[98px] h-[98px] drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]" aria-label="Yash & Misha Gold Seal">
-            <circle cx="60" cy="60" r="56" fill="rgba(10, 17, 36, 0.55)" stroke="#E8C97A" stroke-width="1.25" />
-            <circle cx="60" cy="60" r="50" fill="none" stroke="#C89F4C" stroke-width="0.75" stroke-opacity="0.7" />
-            <circle cx="60" cy="60" r="34" fill="none" stroke="#C89F4C" stroke-width="0.6" stroke-opacity="0.48" />
-            <text fill="#FCE9B5" font-size="7.2" font-family="'Cormorant Garamond', serif" font-weight="600" letter-spacing="2.2">
-              <textPath href="#sealTopArc" startOffset="50%" text-anchor="middle">
-                YASH &amp; MISHA
-              </textPath>
-            </text>
-            <text fill="#E8C97A" font-size="7.8" font-family="'Noto Serif Devanagari', serif" letter-spacing="1.4">
-              <textPath href="#sealBottomArc" startOffset="50%" text-anchor="middle">
-                यश • मिशा
-              </textPath>
-            </text>
-            <text x="60" y="67" text-anchor="middle" fill="#FCE9B5" font-family="'Cormorant Garamond', serif" font-size="27" font-weight="600" letter-spacing="1">
-              YM
-            </text>
-          </svg>
-        </div>
-
-        <p class="font-script text-[2.95rem] leading-none text-[#FCE9B5]" data-i18n="footerCouple">
-          Yash &amp; Misha
-        </p>
-
-        <p class="mt-2 font-serif-ed italic text-[1.12rem] text-[#E8C97A]" data-i18n="footerSaga">
-          Our Eternal Union Saga
-        </p>
-
-        <p class="mt-1 font-serif-ed text-[1.05rem] tracking-[0.08em] text-[#F6F0E4]/95" data-i18n="footerDate">
-          13 – 14 December 2026
-        </p>
-
-        <p class="mt-2 font-serif-ed font-semibold text-[0.98rem] tracking-[0.14em] text-[#FCE9B5]">
-          #YashMeGhuliMishri
-        </p>
-      </footer>
-
-    </div>
-  </div>
-
-  <!-- ===================================================================== -->
-  <!-- JAVASCRIPT: NATIVE AUDIO, 48-NODE DIYA IGNITION, 5-PALETTE FIREWORKS, -->
-  <!--             SCRATCH COINS, 7-PHOTO GALLERY, 16-CHAPTER SAGA & I18N    -->
-  <!-- ===================================================================== -->
-  <script>
-    (function () {
-      'use strict';
-
-      /* -------------------------------------------------------------------
-         0. Toast Helper & Clean Local Image Error Handling
-            (Zero external URLs or fallbacks that override local files)
-      ------------------------------------------------------------------- */
-      let toastTimer = null;
-      function showToast(message) {
-        const pill = document.getElementById('toast-pill');
-        const text = document.getElementById('toast-text');
-        if (!pill || !text) return;
-        text.textContent = message;
-        pill.classList.remove('-translate-y-8', 'opacity-0');
-        pill.classList.add('translate-y-0', 'opacity-100');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(() => {
-          pill.classList.remove('translate-y-0', 'opacity-100');
-          pill.classList.add('-translate-y-8', 'opacity-0');
-        }, 2400);
-      }
-
-      // Graceful visual handling if decorative local images are absent in a bare preview
-      document.querySelectorAll('img[data-decorative-divider="true"]').forEach((img) => {
-        const fallbackSvg = img.nextElementSibling;
-        const swapToSvg = () => {
-          img.classList.add('hidden');
-          if (fallbackSvg && fallbackSvg.tagName.toLowerCase() === 'svg') {
-            fallbackSvg.classList.remove('hidden');
-          }
-        };
-        img.addEventListener('error', swapToSvg);
-        if (img.complete && img.naturalWidth === 0) swapToSvg();
-      });
-
-      document.querySelectorAll('img[data-hide-on-error="true"]').forEach((img) => {
-        const hideImg = () => img.classList.add('hidden');
-        img.addEventListener('error', hideImg);
-        if (img.complete && img.naturalWidth === 0) hideImg();
-      });
-
-      /* -------------------------------------------------------------------
-         1. Native HTML5 Audio Controller (./Song.mp3 primary -> ./song.mp3)
-            NO Web Audio API synthesizer anywhere.
-      ------------------------------------------------------------------- */
-      const weddingAudio = document.getElementById('wedding-audio');
-      const audioToggleBtn = document.getElementById('audio-toggle-btn');
-      const audioIconPlay = document.getElementById('audio-icon-play');
-      const audioIconPause = document.getElementById('audio-icon-pause');
-
-      const AUDIO_SOURCES = ['./Song.mp3', './song.mp3'];
-      let audioSourceIndex = 0;
-      let isAudioPlaying = false;
-
-      function syncAudioButtonUI() {
-        if (!audioIconPlay || !audioIconPause) return;
-        if (isAudioPlaying) {
-          audioIconPlay.classList.add('hidden');
-          audioIconPause.classList.remove('hidden');
-        } else {
-          audioIconPlay.classList.remove('hidden');
-          audioIconPause.classList.add('hidden');
-        }
-      }
-
-      if (weddingAudio) {
-        weddingAudio.addEventListener('error', () => {
-          if (audioSourceIndex + 1 < AUDIO_SOURCES.length) {
-            audioSourceIndex++;
-            weddingAudio.src = AUDIO_SOURCES[audioSourceIndex];
-            weddingAudio.load();
-            if (isAudioPlaying) {
-              weddingAudio.play().catch(() => {});
-            }
-          }
-        });
-
-        weddingAudio.addEventListener('play', () => {
-          isAudioPlaying = true;
-          syncAudioButtonUI();
-        });
-
-        weddingAudio.addEventListener('pause', () => {
-          isAudioPlaying = false;
-          syncAudioButtonUI();
-        });
-
-        weddingAudio.addEventListener('ended', () => {
-          isAudioPlaying = false;
-          syncAudioButtonUI();
-        });
-      }
-
-      // Must be called synchronously inside a user tap/click gesture
-      function playWeddingSong(silentToast) {
-        if (!weddingAudio) return;
-        try {
-          if (!weddingAudio.currentSrc && !weddingAudio.src) {
-            weddingAudio.src = AUDIO_SOURCES[audioSourceIndex];
-          }
-          const playPromise = weddingAudio.play();
-          isAudioPlaying = true;
-          syncAudioButtonUI();
-
-          if (playPromise && typeof playPromise.then === 'function') {
-            playPromise
-              .then(() => {
-                if (!silentToast) {
-                  showToast(currentLang === 'hi' ? 'विवाह गीत बज रहा है' : 'Playing wedding song');
-                }
-              })
-              .catch(() => {
-                // Retry once with secondary lowercase fallback if primary failed
-                if (audioSourceIndex + 1 < AUDIO_SOURCES.length) {
-                  audioSourceIndex++;
-                  weddingAudio.src = AUDIO_SOURCES[audioSourceIndex];
-                  weddingAudio.load();
-                  weddingAudio.play().catch(() => {
-                    isAudioPlaying = false;
-                    syncAudioButtonUI();
-                  });
-                } else {
-                  isAudioPlaying = false;
-                  syncAudioButtonUI();
-                }
-              });
-          }
-        } catch (err) {
-          isAudioPlaying = false;
-          syncAudioButtonUI();
-        }
-      }
-
-      function pauseWeddingSong() {
-        if (!weddingAudio) return;
-        try {
-          weddingAudio.pause();
-        } catch (err) {
-          // Ignore pause errors
-        }
-        isAudioPlaying = false;
-        syncAudioButtonUI();
-      }
-
-      if (audioToggleBtn) {
-        audioToggleBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          if (isAudioPlaying) {
-            pauseWeddingSong();
-          } else {
-            playWeddingSong(false);
-            if (heroState === 'UNLIT_WAITING') {
-              triggerHeroOpeningSequence();
-            }
-          }
-        });
-      }
-
-      /* -------------------------------------------------------------------
-         2. Immersive Hero Canvas:
-            - Unlit ./opening-v2-first.webp + starry Ayodhya fallback + floating Saryu diya
-            - 48-node sequential diya ignition wave (0.04s to 2.94s) with sparks,
-              persistent flickering golden halos & progressive unmasking of ./opening-v2-last.webp
-            - 3.00s+: Rising comet rockets -> 5 jewel-toned firework palettes
-      ------------------------------------------------------------------- */
-      const heroCanvas = document.getElementById('hero-stage-canvas');
-      const hCtx = heroCanvas ? heroCanvas.getContext('2d') : null;
-      let cw = 430;
-      let ch = 780;
-
-      // Local hero images (do NOT force crossOrigin on local files to prevent local/file:// issues)
-      const unlitImg = new Image();
-      let unlitImgReady = false;
-      unlitImg.onload = () => { unlitImgReady = true; };
-      unlitImg.onerror = () => { unlitImgReady = false; };
-      unlitImg.src = './opening-v2-first.webp';
-
-      const litImg = new Image();
-      let litImgReady = false;
-      litImg.onload = () => { litImgReady = true; };
-      litImg.onerror = () => { litImgReady = false; };
-      litImg.src = './opening-v2-last.webp';
-
-      // Offscreen buffers for local progressive unmasking of ./opening-v2-last.webp
-      const litBuffer = document.createElement('canvas');
-      const maskBuffer = document.createElement('canvas');
-      let canUseMaskComposite = true;
-
-      // Starfield for rich fallback starry night sky (also subtle shimmer in upper sky)
-      const skyStars = Array.from({ length: 68 }, () => ({
-        nx: Math.random(),
-        ny: Math.random() * 0.44,
-        r: 0.55 + Math.random() * 1.25,
-        phase: Math.random() * Math.PI * 2,
-        speed: 0.0014 + Math.random() * 0.0024
-      }));
-
-      // 48-Node Sequential Diya Ignition Coordinates (0.04s to 2.94s)
-      // Sweeps along foreground ghat steps -> mid riverbank tiers -> Ram Mandir steps & shikharas -> Saryu reflections
-      const DIYA_NODES = [
-        // Tier 1: Foreground Ghat Steps (bottom-right sweeping left & upward, 0.04s – 0.88s)
-        { nx: 0.92, ny: 0.95, t: 0.04, r: 0.12 },
-        { nx: 0.86, ny: 0.93, t: 0.10, r: 0.12 },
-        { nx: 0.80, ny: 0.91, t: 0.16, r: 0.13 },
-        { nx: 0.74, ny: 0.89, t: 0.22, r: 0.13 },
-        { nx: 0.68, ny: 0.87, t: 0.28, r: 0.13 },
-        { nx: 0.62, ny: 0.85, t: 0.34, r: 0.14 },
-        { nx: 0.56, ny: 0.83, t: 0.40, r: 0.14 },
-        { nx: 0.63, ny: 0.80, t: 0.46, r: 0.14 },
-        { nx: 0.70, ny: 0.78, t: 0.52, r: 0.14 },
-        { nx: 0.77, ny: 0.76, t: 0.58, r: 0.15 },
-        { nx: 0.84, ny: 0.74, t: 0.64, r: 0.15 },
-        { nx: 0.91, ny: 0.72, t: 0.70, r: 0.15 },
-        { nx: 0.87, ny: 0.68, t: 0.76, r: 0.15 },
-        { nx: 0.79, ny: 0.66, t: 0.82, r: 0.16 },
-        { nx: 0.71, ny: 0.64, t: 0.88, r: 0.16 },
-
-        // Tier 2: Mid Riverbank Ghats & Archways (0.94s – 1.66s)
-        { nx: 0.63, ny: 0.63, t: 0.94, r: 0.16 },
-        { nx: 0.55, ny: 0.62, t: 1.00, r: 0.16 },
-        { nx: 0.93, ny: 0.62, t: 1.06, r: 0.16 },
-        { nx: 0.85, ny: 0.59, t: 1.12, r: 0.17 },
-        { nx: 0.76, ny: 0.58, t: 1.18, r: 0.17 },
-        { nx: 0.67, ny: 0.57, t: 1.24, r: 0.17 },
-        { nx: 0.58, ny: 0.57, t: 1.30, r: 0.18 },
-        { nx: 0.49, ny: 0.57, t: 1.36, r: 0.18 },
-        { nx: 0.41, ny: 0.58, t: 1.42, r: 0.18 },
-        { nx: 0.33, ny: 0.59, t: 1.48, r: 0.18 },
-        { nx: 0.25, ny: 0.60, t: 1.54, r: 0.18 },
-        { nx: 0.16, ny: 0.61, t: 1.60, r: 0.18 },
-        { nx: 0.08, ny: 0.62, t: 1.66, r: 0.18 },
-
-        // Tier 3: Ram Mandir Courtyard, Plinth & Illuminated Pillars (1.72s – 2.38s)
-        { nx: 0.20, ny: 0.54, t: 1.72, r: 0.20 },
-        { nx: 0.29, ny: 0.52, t: 1.78, r: 0.20 },
-        { nx: 0.38, ny: 0.51, t: 1.84, r: 0.21 },
-        { nx: 0.47, ny: 0.50, t: 1.90, r: 0.22 },
-        { nx: 0.56, ny: 0.51, t: 1.96, r: 0.21 },
-        { nx: 0.65, ny: 0.52, t: 2.02, r: 0.20 },
-        { nx: 0.74, ny: 0.53, t: 2.08, r: 0.20 },
-        { nx: 0.34, ny: 0.46, t: 2.14, r: 0.22 },
-        { nx: 0.43, ny: 0.44, t: 2.20, r: 0.24 },
-        { nx: 0.52, ny: 0.42, t: 2.26, r: 0.26 },
-        { nx: 0.60, ny: 0.45, t: 2.32, r: 0.22 },
-        { nx: 0.49, ny: 0.37, t: 2.38, r: 0.26 },
-
-        // Tier 4: Saryu River Reflections & Floating Lamps (2.45s – 2.94s)
-        { nx: 0.14, ny: 0.69, t: 2.45, r: 0.24 },
-        { nx: 0.26, ny: 0.71, t: 2.52, r: 0.24 },
-        { nx: 0.38, ny: 0.72, t: 2.59, r: 0.25 },
-        { nx: 0.48, ny: 0.74, t: 2.66, r: 0.25 },
-        { nx: 0.22, ny: 0.79, t: 2.73, r: 0.26 },
-        { nx: 0.35, ny: 0.82, t: 2.80, r: 0.26 },
-        { nx: 0.46, ny: 0.86, t: 2.87, r: 0.28 },
-        { nx: 0.30, ny: 0.90, t: 2.94, r: 0.30 }
-      ];
-
-      // 5 Jewel-Toned Firework Palettes
-      const FIREWORK_PALETTES = [
-        // 1. Royal Gold
-        { core: '#FFFDF0', outer: ['#FFE082', '#FFC107', '#FF9800', '#FCE9B5'], inner: ['#FFF8DC', '#FFD54F'] },
-        // 2. Ruby Crimson
-        { core: '#FFF0F5', outer: ['#FF2A6D', '#E63946', '#FF6B8B', '#FFD166'], inner: ['#FFB3C6', '#FFF3B0'] },
-        // 3. Emerald
-        { core: '#E8FFF8', outer: ['#06D6A0', '#00F5D4', '#2EC4B6', '#FFE66D'], inner: ['#B5FFE9', '#FFD166'] },
-        // 4. Sapphire
-        { core: '#F0F7FF', outer: ['#3A86FF', '#4CC9F0', '#72EFDD', '#FCE9B5'], inner: ['#BDE0FE', '#FFD166'] },
-        // 5. Amethyst & Rose
-        { core: '#FCF0FF', outer: ['#C77DFF', '#9D4EDD', '#FF5D8F', '#FCE9B5'], inner: ['#F4C2FF', '#FFE57F'] }
-      ];
-
-      let heroState = 'UNLIT_WAITING'; // 'UNLIT_WAITING' | 'IGNITING' | 'FULLY_LIT'
-      let ignitionStartMs = 0;
-      let fireworksStarted = false;
-      let lastAutoRocketMs = 0;
-      let paletteIndexCycle = 0;
-
-      const ignitionSparks = [];
-      const ignitedSet = new Set();
-      const cometRockets = [];
-      const fireworkBursts = [];
-
-      function resizeHeroCanvas() {
-        if (!heroCanvas || !hCtx || !heroCanvas.parentElement) return;
-        const rect = heroCanvas.parentElement.getBoundingClientRect();
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        cw = Math.max(1, Math.round(rect.width || 430));
-        ch = Math.max(1, Math.round(rect.height || 780));
-        heroCanvas.width = Math.round(cw * dpr);
-        heroCanvas.height = Math.round(ch * dpr);
-        hCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-        litBuffer.width = cw;
-        litBuffer.height = ch;
-        maskBuffer.width = cw;
-        maskBuffer.height = ch;
-      }
-
-      function drawImageCoverBottom(ctx, img, targetW, targetH) {
-        if (!img || !img.naturalWidth || !img.naturalHeight) return;
-        const imgRatio = img.naturalWidth / img.naturalHeight;
-        const targetRatio = targetW / targetH;
-        let drawW, drawH, offsetX, offsetY;
-        if (imgRatio > targetRatio) {
-          drawH = targetH;
-          drawW = targetH * imgRatio;
-          offsetX = (targetW - drawW) / 2;
-          offsetY = 0;
-        } else {
-          drawW = targetW;
-          drawH = targetW / imgRatio;
-          offsetX = 0;
-          offsetY = targetH - drawH;
-        }
-        ctx.drawImage(img, offsetX, offsetY, drawW, drawH);
-      }
-
-      // Rich starry Ayodhya night-sky + silhouette fallback when opening .webp files are absent
-      function drawFallbackAyodhyaScene(ctx, now, litProgress) {
-        const skyGrad = ctx.createLinearGradient(0, 0, 0, ch);
-        skyGrad.addColorStop(0, '#050918');
-        skyGrad.addColorStop(0.42, litProgress > 0 ? '#141e3d' : '#0b142d');
-        skyGrad.addColorStop(0.68, litProgress > 0 ? '#2b2436' : '#111b36');
-        skyGrad.addColorStop(1, '#0c1328');
-        ctx.fillStyle = skyGrad;
-        ctx.fillRect(0, 0, cw, ch);
-
-        // Twinkling upper night-sky stars
-        skyStars.forEach((st) => {
-          const alpha = 0.25 + 0.65 * Math.abs(Math.sin(now * st.speed + st.phase));
-          ctx.fillStyle = `rgba(252, 233, 181, ${alpha.toFixed(2)})`;
-          ctx.beginPath();
-          ctx.arc(st.nx * cw, st.ny * ch, st.r, 0, Math.PI * 2);
-          ctx.fill();
-        });
-
-        // Warm ambient golden temple horizon glow as diyas light up
-        if (litProgress > 0.01) {
-          const horizonGlow = ctx.createRadialGradient(cw * 0.5, ch * 0.56, 12, cw * 0.5, ch * 0.56, cw * 0.72);
-          horizonGlow.addColorStop(0, `rgba(255, 196, 86, ${(0.34 * litProgress).toFixed(3)})`);
-          horizonGlow.addColorStop(0.55, `rgba(232, 145, 52, ${(0.16 * litProgress).toFixed(3)})`);
-          horizonGlow.addColorStop(1, 'rgba(12, 19, 40, 0)');
-          ctx.fillStyle = horizonGlow;
-          ctx.fillRect(0, 0, cw, ch);
-        }
-
-        // Temple Shikhara Silhouette (sits cleanly below the top 34% sky zone)
-        ctx.fillStyle = litProgress > 0.35 ? '#1c182c' : '#0b1124';
-        ctx.beginPath();
-        ctx.moveTo(cw * 0.14, ch * 0.62);
-        ctx.lineTo(cw * 0.24, ch * 0.53);
-        ctx.lineTo(cw * 0.32, ch * 0.56);
-        ctx.lineTo(cw * 0.42, ch * 0.44);
-        ctx.lineTo(cw * 0.49, ch * 0.36);
-        ctx.lineTo(cw * 0.56, ch * 0.44);
-        ctx.lineTo(cw * 0.66, ch * 0.55);
-        ctx.lineTo(cw * 0.76, ch * 0.52);
-        ctx.lineTo(cw * 0.86, ch * 0.62);
-        ctx.lineTo(cw, ch * 0.62);
-        ctx.lineTo(cw, ch);
-        ctx.lineTo(0, ch);
-        ctx.closePath();
-        ctx.fill();
-
-        // Saryu River Basin
-        const riverGrad = ctx.createLinearGradient(0, ch * 0.62, 0, ch);
-        riverGrad.addColorStop(0, litProgress > 0 ? '#181f38' : '#0a1226');
-        riverGrad.addColorStop(1, '#0c1328');
-        ctx.fillStyle = riverGrad;
-        ctx.fillRect(0, ch * 0.62, cw, ch * 0.38);
-
-        // Curved Ghat Steps on Right
-        ctx.fillStyle = litProgress > 0.2 ? '#231c2e' : '#0d152b';
-        ctx.beginPath();
-        ctx.moveTo(cw * 0.50, ch);
-        ctx.quadraticCurveTo(cw * 0.62, ch * 0.72, cw, ch * 0.58);
-        ctx.lineTo(cw, ch);
-        ctx.closePath();
-        ctx.fill();
-      }
-
-      // Gently flickering floating diya on the Saryu river before ignition
-      function drawFloatingSaryuDiya(ctx, now) {
-        const fx = cw * 0.32 + Math.sin(now * 0.0011) * 7;
-        const fy = ch * 0.77 + Math.cos(now * 0.0017) * 2.5;
-        const flicker = 0.88 + 0.16 * Math.sin(now * 0.012) + 0.08 * Math.cos(now * 0.027);
-
-        ctx.save();
-        // Water reflection shimmer
-        const refGrad = ctx.createRadialGradient(fx, fy + 10, 1, fx, fy + 10, 26 * flicker);
-        refGrad.addColorStop(0, 'rgba(255, 204, 102, 0.42)');
-        refGrad.addColorStop(1, 'rgba(255, 140, 36, 0)');
-        ctx.fillStyle = refGrad;
-        ctx.beginPath();
-        ctx.ellipse(fx, fy + 10, 24 * flicker, 8 * flicker, 0, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Warm aura
-        const aura = ctx.createRadialGradient(fx, fy - 4, 1, fx, fy - 4, 28 * flicker);
-        aura.addColorStop(0, 'rgba(255, 245, 200, 0.88)');
-        aura.addColorStop(0.4, 'rgba(255, 168, 56, 0.45)');
-        aura.addColorStop(1, 'rgba(255, 120, 20, 0)');
-        ctx.fillStyle = aura;
-        ctx.beginPath();
-        ctx.arc(fx, fy - 4, 28 * flicker, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Earthen bowl
-        ctx.fillStyle = '#B85028';
-        ctx.beginPath();
-        ctx.ellipse(fx, fy + 2, 10, 4.2, 0, 0, Math.PI);
-        ctx.fill();
-        ctx.strokeStyle = '#E8C97A';
-        ctx.lineWidth = 0.9;
-        ctx.stroke();
-
-        // Flame teardrop
-        ctx.fillStyle = '#FFF3BF';
-        ctx.beginPath();
-        ctx.moveTo(fx, fy - 11 * flicker);
-        ctx.quadraticCurveTo(fx + 4.2, fy - 3, fx, fy + 0.5);
-        ctx.quadraticCurveTo(fx - 4.2, fy - 3, fx, fy - 11 * flicker);
-        ctx.fill();
-        ctx.restore();
-      }
-
-      // Draw a persistent flickering golden diya flame & halo at an ignited node
-      function drawNodeDiyaGlow(ctx, x, y, ageSec, now, seed) {
-        const fadeIn = Math.min(1, ageSec / 0.22);
-        const flicker = 0.86 + 0.18 * Math.sin(now * 0.015 + seed * 3.1) + 0.08 * Math.cos(now * 0.029 + seed);
-        const radius = (11 + (seed % 5) * 1.4) * flicker;
-
-        ctx.save();
-        ctx.globalCompositeOperation = 'lighter';
-
-        const glow = ctx.createRadialGradient(x, y, 0.5, x, y, radius);
-        glow.addColorStop(0, `rgba(255, 249, 220, ${(0.85 * fadeIn).toFixed(3)})`);
-        glow.addColorStop(0.35, `rgba(255, 190, 74, ${(0.45 * fadeIn).toFixed(3)})`);
-        glow.addColorStop(1, 'rgba(255, 120, 24, 0)');
-        ctx.fillStyle = glow;
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Crisp bright flame core
-        ctx.fillStyle = `rgba(255, 246, 205, ${(0.92 * fadeIn).toFixed(3)})`;
-        ctx.beginPath();
-        ctx.arc(x, y - 1.2, 1.8 * flicker, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.restore();
-      }
-
-      function spawnIgnitionBurstSparks(x, y) {
-        for (let i = 0; i < 8; i++) {
-          const angle = (Math.PI * 2 * i) / 8 + Math.random() * 0.5;
-          const speed = 0.6 + Math.random() * 1.6;
-          ignitionSparks.push({
-            x,
-            y,
-            vx: Math.cos(angle) * speed,
-            vy: Math.sin(angle) * speed - 0.5,
-            alpha: 1,
-            decay: 0.032 + Math.random() * 0.02,
-            size: 1.2 + Math.random() * 1.2
-          });
-        }
-      }
-
-      // Launch rising comet rocket that bursts into one of the 5 jewel-toned palettes
-      function launchCometRocket(targetX, targetY, paletteIdx) {
-        const pal = FIREWORK_PALETTES[
-          typeof paletteIdx === 'number'
-            ? paletteIdx % FIREWORK_PALETTES.length
-            : Math.floor(Math.random() * FIREWORK_PALETTES.length)
-        ];
-        const startX = targetX + (Math.random() - 0.5) * 44;
-        const startY = ch * 0.62;
-        const frames = 26 + Math.floor(Math.random() * 10);
-
-        cometRockets.push({
-          x: startX,
-          y: startY,
-          vx: (targetX - startX) / frames,
-          vy: (targetY - startY) / frames,
-          targetY,
-          palette: pal,
-          trail: []
-        });
-      }
-
-      function spawnJewelBurst(x, y, pal) {
-        const sparks = [];
-
-        // Outer jewel peony ring (48 trailed sparks)
-        const outerCount = 48;
-        for (let i = 0; i < outerCount; i++) {
-          const angle = (Math.PI * 2 * i) / outerCount + (Math.random() - 0.5) * 0.06;
-          const speed = 1.4 + Math.random() * 1.65;
-          sparks.push({
-            x,
-            y,
-            trail: [{ x, y }, { x, y }, { x, y }, { x, y }],
-            vx: Math.cos(angle) * speed,
-            vy: Math.sin(angle) * speed,
-            gravity: 0.021,
-            drag: 0.978,
-            alpha: 1,
-            decay: 0.0105 + Math.random() * 0.0055,
-            size: 1.45 + Math.random() * 1.0,
-            color: pal.outer[i % pal.outer.length],
-            twinkle: false,
-            phase: Math.random() * Math.PI * 2
-          });
-        }
-
-        // Inner contrasting ring (24 sparks)
-        const innerCount = 24;
-        for (let i = 0; i < innerCount; i++) {
-          const angle = (Math.PI * 2 * i) / innerCount + (Math.random() - 0.5) * 0.1;
-          const speed = 0.6 + Math.random() * 0.85;
-          sparks.push({
-            x,
-            y,
-            trail: [{ x, y }, { x, y }, { x, y }],
-            vx: Math.cos(angle) * speed,
-            vy: Math.sin(angle) * speed,
-            gravity: 0.016,
-            drag: 0.982,
-            alpha: 1,
-            decay: 0.013 + Math.random() * 0.006,
-            size: 1.25 + Math.random() * 0.75,
-            color: pal.inner[i % pal.inner.length],
-            twinkle: false,
-            phase: Math.random() * Math.PI * 2
-          });
-        }
-
-        // Shimmer glitter tips (20 twinkling sparks)
-        for (let i = 0; i < 20; i++) {
-          const angle = Math.random() * Math.PI * 2;
-          const speed = 0.45 + Math.random() * 2.15;
-          sparks.push({
-            x,
-            y,
-            trail: [{ x, y }, { x, y }],
-            vx: Math.cos(angle) * speed,
-            vy: Math.sin(angle) * speed,
-            gravity: 0.024,
-            drag: 0.974,
-            alpha: 1,
-            decay: 0.0095 + Math.random() * 0.005,
-            size: 1.1 + Math.random() * 0.8,
-            color: '#FFF9D6',
-            twinkle: true,
-            phase: Math.random() * Math.PI * 2
-          });
-        }
-
-        fireworkBursts.push({
-          x,
-          y,
-          coreColor: pal.core,
-          glowColor: pal.outer[0],
-          flashRadius: 6,
-          maxFlashRadius: 56 + Math.random() * 20,
-          flashAlpha: 0.92,
-          sparks
-        });
-      }
-
-      function revealHeroTypography() {
-        const l1 = document.getElementById('hero-line-1');
-        const l2 = document.getElementById('hero-line-2');
-        const l3 = document.getElementById('hero-line-3');
-        const sc = document.getElementById('hero-scroll-cue');
-        if (l1) setTimeout(() => l1.classList.add('is-visible'), 120);
-        if (l2) setTimeout(() => l2.classList.add('is-visible'), 480);
-        if (l3) setTimeout(() => l3.classList.add('is-visible'), 860);
-        if (sc) setTimeout(() => sc.classList.add('is-visible'), 1350);
-      }
-
-      // Show high-sky hero header subtly right away so couple names & #YashMeGhuliMishri are visible on load too
-      setTimeout(() => {
-        const l1 = document.getElementById('hero-line-1');
-        const l2 = document.getElementById('hero-line-2');
-        const l3 = document.getElementById('hero-line-3');
-        if (l1) l1.classList.add('is-visible');
-        if (l2) l2.classList.add('is-visible');
-        if (l3) l3.classList.add('is-visible');
-      }, 220);
-
-      function triggerHeroOpeningSequence() {
-        if (heroState !== 'UNLIT_WAITING') return;
-        heroState = 'IGNITING';
-        ignitionStartMs = performance.now();
-        fireworksStarted = false;
-        ignitedSet.clear();
-
-        const tapWrap = document.getElementById('tap-to-light-wrap');
-        if (tapWrap) {
-          tapWrap.style.opacity = '0';
-          tapWrap.style.pointerEvents = 'none';
-          tapWrap.style.transform = 'translateY(10px)';
-        }
-      }
-
-      function animateHero(now) {
-        if (!hCtx) return;
-        hCtx.clearRect(0, 0, cw, ch);
-
-        const elapsedSec = heroState === 'UNLIT_WAITING' ? 0 : (now - ignitionStartMs) / 1000;
-        const litProgress = heroState === 'UNLIT_WAITING'
-          ? 0
-          : heroState === 'FULLY_LIT'
-            ? 1
-            : Math.min(1, elapsedSec / 3.0);
-
-        // 1. Base Layer: Unlit ./opening-v2-first.webp OR Rich Starry Ayodhya Fallback
-        if (unlitImgReady) {
-          drawImageCoverBottom(hCtx, unlitImg, cw, ch);
-        } else {
-          drawFallbackAyodhyaScene(hCtx, now, litProgress);
-        }
-
-        // 2. Waiting State: Floating Diya on the Saryu River
-        if (heroState === 'UNLIT_WAITING') {
-          drawFloatingSaryuDiya(hCtx, now);
-        }
-
-        // 3. Ignition Sequence (0.04s to 2.94s across 48 nodes)
-        if (heroState === 'IGNITING') {
-          // Trigger ignition sparks for newly lit nodes
-          for (let i = 0; i < DIYA_NODES.length; i++) {
-            const node = DIYA_NODES[i];
-            if (elapsedSec >= node.t && !ignitedSet.has(i)) {
-              ignitedSet.add(i);
-              spawnIgnitionBurstSparks(node.nx * cw, node.ny * ch);
-            }
-          }
-
-          // Progressive Unmasking of ./opening-v2-last.webp
-          if (litImgReady) {
-            if (canUseMaskComposite) {
-              try {
-                const lCtx = litBuffer.getContext('2d');
-                const mCtx = maskBuffer.getContext('2d');
-                mCtx.clearRect(0, 0, cw, ch);
-
-                for (let i = 0; i < DIYA_NODES.length; i++) {
-                  const node = DIYA_NODES[i];
-                  const localT = Math.max(0, Math.min(1, (elapsedSec - node.t) / 0.42));
-                  if (localT > 0) {
-                    const nx = node.nx * cw;
-                    const ny = node.ny * ch;
-                    const rad = Math.max(cw, ch) * node.r * (0.35 + 0.65 * localT);
-                    const rg = mCtx.createRadialGradient(nx, ny, 3, nx, ny, rad);
-                    rg.addColorStop(0, `rgba(255, 255, 255, ${localT})`);
-                    rg.addColorStop(0.55, `rgba(255, 255, 255, ${(localT * 0.82).toFixed(3)})`);
-                    rg.addColorStop(1, 'rgba(255, 255, 255, 0)');
-                    mCtx.fillStyle = rg;
-                    mCtx.beginPath();
-                    mCtx.arc(nx, ny, rad, 0, Math.PI * 2);
-                    mCtx.fill();
-                  }
-                }
-
-                // Final seamless full-scene blend once all 48 nodes ignite
-                if (elapsedSec > 2.45) {
-                  const fullAlpha = Math.min(1, (elapsedSec - 2.45) / 0.55);
-                  mCtx.fillStyle = `rgba(255, 255, 255, ${fullAlpha})`;
-                  mCtx.fillRect(0, 0, cw, ch);
-                }
-
-                lCtx.clearRect(0, 0, cw, ch);
-                lCtx.globalCompositeOperation = 'source-over';
-                drawImageCoverBottom(lCtx, litImg, cw, ch);
-                lCtx.globalCompositeOperation = 'destination-in';
-                lCtx.drawImage(maskBuffer, 0, 0);
-
-                hCtx.drawImage(litBuffer, 0, 0);
-              } catch (err) {
-                canUseMaskComposite = false;
-              }
-            }
-
-            // Smooth alpha-blending fallback if canvas masking is ever blocked
-            if (!canUseMaskComposite) {
-              hCtx.save();
-              hCtx.globalAlpha = litProgress;
-              drawImageCoverBottom(hCtx, litImg, cw, ch);
-              hCtx.restore();
-            }
-          }
-
-          // Render persistent warm flickering golden halos on every ignited node
-          for (let i = 0; i < DIYA_NODES.length; i++) {
-            const node = DIYA_NODES[i];
-            if (elapsedSec >= node.t) {
-              drawNodeDiyaGlow(hCtx, node.nx * cw, node.ny * ch, elapsedSec - node.t, now, i + 1);
-            }
-          }
-
-          // At 3.00s+: Transition to FULLY_LIT, reveal Scroll Cue & launch jewel-toned fireworks
-          if (elapsedSec >= 3.00 && !fireworksStarted) {
-            fireworksStarted = true;
-            heroState = 'FULLY_LIT';
-            revealHeroTypography();
-
-            // Launch opening salvo across all 5 jewel-toned palettes
-            launchCometRocket(cw * 0.24, ch * 0.26, 0); // Royal Gold
-            setTimeout(() => launchCometRocket(cw * 0.76, ch * 0.24, 1), 280); // Ruby Crimson
-            setTimeout(() => launchCometRocket(cw * 0.50, ch * 0.20, 2), 620); // Emerald
-            setTimeout(() => launchCometRocket(cw * 0.30, ch * 0.31, 3), 980); // Sapphire
-            setTimeout(() => launchCometRocket(cw * 0.70, ch * 0.30, 4), 1320); // Amethyst/Rose
-            lastAutoRocketMs = now + 1500;
-          }
-        } else if (heroState === 'FULLY_LIT') {
-          if (litImgReady) {
-            drawImageCoverBottom(hCtx, litImg, cw, ch);
-          }
-
-          // Keep gentle living diya shimmer across key ghat & temple nodes
-          for (let i = 0; i < DIYA_NODES.length; i += 2) {
-            const node = DIYA_NODES[i];
-            drawNodeDiyaGlow(hCtx, node.nx * cw, node.ny * ch, 1, now, i + 1);
-          }
-
-          // Periodic celebratory comet rockets in the upper sky
-          if (now - lastAutoRocketMs > 2300) {
-            lastAutoRocketMs = now;
-            paletteIndexCycle = (paletteIndexCycle + 1) % FIREWORK_PALETTES.length;
-            launchCometRocket(
-              cw * (0.18 + Math.random() * 0.64),
-              ch * (0.18 + Math.random() * 0.14),
-              paletteIndexCycle
-            );
-            setTimeout(() => {
-              paletteIndexCycle = (paletteIndexCycle + 1) % FIREWORK_PALETTES.length;
-              launchCometRocket(
-                cw * (0.20 + Math.random() * 0.60),
-                ch * (0.19 + Math.random() * 0.13),
-                paletteIndexCycle
-              );
-            }, 520);
-          }
-        }
-
-        // 4. Render Active Diya Ignition Sparks
-        if (ignitionSparks.length > 0) {
-          hCtx.save();
-          hCtx.globalCompositeOperation = 'lighter';
-          for (let i = ignitionSparks.length - 1; i >= 0; i--) {
-            const sp = ignitionSparks[i];
-            sp.x += sp.vx;
-            sp.y += sp.vy;
-            sp.vy += 0.04;
-            sp.alpha -= sp.decay;
-            if (sp.alpha <= 0) {
-              ignitionSparks.splice(i, 1);
-              continue;
-            }
-            hCtx.globalAlpha = sp.alpha;
-            hCtx.fillStyle = '#FFE58F';
-            hCtx.beginPath();
-            hCtx.arc(sp.x, sp.y, sp.size, 0, Math.PI * 2);
-            hCtx.fill();
-          }
-          hCtx.restore();
-        }
-
-        // 5. Render Rising Comet Rockets
-        if (cometRockets.length > 0) {
-          hCtx.save();
-          hCtx.globalCompositeOperation = 'lighter';
-          for (let i = cometRockets.length - 1; i >= 0; i--) {
-            const rk = cometRockets[i];
-            rk.trail.push({ x: rk.x, y: rk.y });
-            if (rk.trail.length > 9) rk.trail.shift();
-
-            rk.x += rk.vx;
-            rk.y += rk.vy;
-
-            // Comet tail
-            for (let t = 0; t < rk.trail.length; t++) {
-              const pt = rk.trail[t];
-              const ratio = (t + 1) / rk.trail.length;
-              hCtx.globalAlpha = ratio * 0.75;
-              hCtx.fillStyle = rk.palette.outer[0];
-              hCtx.beginPath();
-              hCtx.arc(pt.x, pt.y, 1.2 + ratio * 1.4, 0, Math.PI * 2);
-              hCtx.fill();
-            }
-
-            // Bright white-gold comet head
-            hCtx.globalAlpha = 1;
-            hCtx.fillStyle = '#FFFDF5';
-            hCtx.beginPath();
-            hCtx.arc(rk.x, rk.y, 2.5, 0, Math.PI * 2);
-            hCtx.fill();
-
-            if (rk.y <= rk.targetY) {
-              spawnJewelBurst(rk.x, rk.y, rk.palette);
-              cometRockets.splice(i, 1);
-            }
-          }
-          hCtx.restore();
-        }
-
-        // 6. Render Jewel-Toned Firework Bursts
-        if (fireworkBursts.length > 0) {
-          hCtx.save();
-          hCtx.globalCompositeOperation = 'lighter';
-
-          for (let i = fireworkBursts.length - 1; i >= 0; i--) {
-            const fw = fireworkBursts[i];
-            let alive = false;
-
-            if (fw.flashAlpha > 0.015) {
-              alive = true;
-              fw.flashRadius += (fw.maxFlashRadius - fw.flashRadius) * 0.18;
-              fw.flashAlpha *= 0.85;
-
-              const flashGrad = hCtx.createRadialGradient(fw.x, fw.y, 1, fw.x, fw.y, fw.flashRadius);
-              flashGrad.addColorStop(0, fw.coreColor);
-              flashGrad.addColorStop(0.4, fw.glowColor);
-              flashGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-
-              hCtx.globalAlpha = fw.flashAlpha * 0.65;
-              hCtx.fillStyle = flashGrad;
-              hCtx.beginPath();
-              hCtx.arc(fw.x, fw.y, fw.flashRadius, 0, Math.PI * 2);
-              hCtx.fill();
-            }
-
-            for (let j = 0; j < fw.sparks.length; j++) {
-              const s = fw.sparks[j];
-              if (s.alpha <= 0) continue;
-              alive = true;
-
-              for (let t = s.trail.length - 1; t > 0; t--) {
-                s.trail[t].x = s.trail[t - 1].x;
-                s.trail[t].y = s.trail[t - 1].y;
-              }
-              s.trail[0].x = s.x;
-              s.trail[0].y = s.y;
-
-              s.x += s.vx;
-              s.y += s.vy;
-              s.vy += s.gravity;
-              s.vx *= s.drag;
-              s.vy *= s.drag;
-              s.alpha -= s.decay;
-
-              if (s.alpha <= 0) continue;
-
-              const twinkleMul = s.twinkle
-                ? 0.42 + 0.58 * Math.abs(Math.sin(now * 0.024 + s.phase))
-                : 1;
-              const drawAlpha = Math.max(0, s.alpha * twinkleMul);
-              const tail = s.trail[s.trail.length - 1];
-
-              hCtx.globalAlpha = drawAlpha * 0.85;
-              hCtx.strokeStyle = s.color;
-              hCtx.lineWidth = s.size;
-              hCtx.lineCap = 'round';
-              hCtx.beginPath();
-              hCtx.moveTo(tail.x, tail.y);
-              hCtx.lineTo(s.x, s.y);
-              hCtx.stroke();
-
-              hCtx.globalAlpha = drawAlpha * 0.35;
-              hCtx.fillStyle = s.color;
-              hCtx.beginPath();
-              hCtx.arc(s.x, s.y, s.size * 2.0, 0, Math.PI * 2);
-              hCtx.fill();
-
-              hCtx.globalAlpha = drawAlpha;
-              hCtx.fillStyle = '#FFFFFF';
-              hCtx.beginPath();
-              hCtx.arc(s.x, s.y, s.size * 0.62, 0, Math.PI * 2);
-              hCtx.fill();
-            }
-
-            if (!alive) fireworkBursts.splice(i, 1);
-          }
-          hCtx.restore();
-        }
-
-        requestAnimationFrame(animateHero);
-      }
-
-      window.addEventListener('resize', resizeHeroCanvas);
-      resizeHeroCanvas();
-      requestAnimationFrame(animateHero);
-
-      // Wire Hero "Tap to Play • light the diyas of Ayodhya" Button
-      const heroPlayBtn = document.getElementById('hero-play-btn');
-      if (heroPlayBtn) {
-        heroPlayBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          // Start ./Song.mp3 synchronously inside the user tap gesture
-          playWeddingSong(true);
-          triggerHeroOpeningSequence();
-        });
-      }
-
-      /* -------------------------------------------------------------------
-         3. Section 2: 4 Circular Gold-Foil Scratch Coins (13, 14, DEC, 2026)
-            Supports BOTH scratching (pointer drag) AND single-tap reveal.
-      ------------------------------------------------------------------- */
-      document.querySelectorAll('.scratch-coin-canvas').forEach((canvas) => {
-        const ctx = canvas.getContext('2d');
-        if (!ctx || !canvas.parentElement) return;
-
-        const size = 72;
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = Math.round(size * dpr);
-        canvas.height = Math.round(size * dpr);
-        ctx.scale(dpr, dpr);
-
-        // Metallic Gold Foil Fill
-        const grad = ctx.createLinearGradient(0, 0, size, size);
-        grad.addColorStop(0, '#C79E44');
-        grad.addColorStop(0.32, '#F7E19E');
-        grad.addColorStop(0.54, '#FFF5D1');
-        grad.addColorStop(0.76, '#D9B155');
-        grad.addColorStop(1, '#A67C28');
-        ctx.fillStyle = grad;
-        ctx.fillRect(0, 0, size, size);
-
-        // Diagonal Foil Shimmer Lines
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.28)';
-        ctx.lineWidth = 1;
-        for (let i = -size; i < size * 2; i += 9) {
-          ctx.beginPath();
-          ctx.moveTo(i, 0);
-          ctx.lineTo(i - size * 0.5, size);
-          ctx.stroke();
-        }
-
-        // Center 4-Pointed Sparkle Star
-        const cx = size / 2;
-        const cy = size / 2;
-        ctx.fillStyle = '#FFFDF5';
-        ctx.beginPath();
-        ctx.moveTo(cx, cy - 9);
-        ctx.quadraticCurveTo(cx, cy, cx + 9, cy);
-        ctx.quadraticCurveTo(cx, cy, cx, cy + 9);
-        ctx.quadraticCurveTo(cx, cy, cx - 9, cy);
-        ctx.quadraticCurveTo(cx, cy, cx, cy - 9);
-        ctx.fill();
-
-        let isPointerDown = false;
-        let hasMoved = false;
-        let scratchSteps = 0;
-        let isRevealed = false;
-        let downX = 0;
-        let downY = 0;
-
-        function revealCoin() {
-          if (isRevealed) return;
-          isRevealed = true;
-          canvas.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
-          canvas.style.opacity = '0';
-          canvas.style.transform = 'scale(1.06)';
-          canvas.style.pointerEvents = 'none';
-        }
-
-        function scratchAt(clientX, clientY) {
-          if (isRevealed) return;
-          const b = canvas.getBoundingClientRect();
-          const x = ((clientX - b.left) / b.width) * size;
-          const y = ((clientY - b.top) / b.height) * size;
-          ctx.globalCompositeOperation = 'destination-out';
-          ctx.beginPath();
-          ctx.arc(x, y, 14, 0, Math.PI * 2);
-          ctx.fill();
-          scratchSteps++;
-          if (scratchSteps >= 8) {
-            revealCoin();
-          }
-        }
-
-        canvas.addEventListener('pointerdown', (e) => {
-          isPointerDown = true;
-          hasMoved = false;
-          downX = e.clientX;
-          downY = e.clientY;
-          scratchAt(e.clientX, e.clientY);
-        });
-
-        canvas.addEventListener('pointermove', (e) => {
-          if (!isPointerDown || isRevealed) return;
-          if (Math.hypot(e.clientX - downX, e.clientY - downY) > 6) {
-            hasMoved = true;
-          }
-          scratchAt(e.clientX, e.clientY);
-        });
-
-        canvas.addEventListener('pointerup', () => {
-          if (!isPointerDown) return;
-          isPointerDown = false;
-          // Single-tap instant reveal
-          if (!hasMoved && !isRevealed) {
-            revealCoin();
-          }
-        });
-
-        canvas.addEventListener('pointercancel', () => {
-          isPointerDown = false;
-        });
-      });
-
-      /* -------------------------------------------------------------------
-         4. Section 5: Our Gallery — Exact 7 Local DSC Photos + Slider
-            Monogram Y & M placeholder shown ONLY if an image fails to load.
-      ------------------------------------------------------------------- */
-      const GALLERY_PHOTOS = [
-        { src: './DSC01036.jpg', capKey: 'cap1', alt: 'Yash and Misha portrait 1' },
-        { src: './DSC01101.jpg', capKey: 'cap2', alt: 'Yash and Misha portrait 2' },
-        { src: './DSC01192.jpg', capKey: 'cap3', alt: 'Yash and Misha portrait 3' },
-        { src: './DSC01230.jpg', capKey: 'cap4', alt: 'Yash and Misha portrait 4' },
-        { src: './DSC01276.jpg', capKey: 'cap5', alt: 'Yash and Misha portrait 5' },
-        { src: './DSC01502.jpg', capKey: 'cap6', alt: 'Yash and Misha portrait 6' },
-        { src: './DSC01536.jpg', capKey: 'cap7', alt: 'Yash and Misha portrait 7' }
-      ];
-
-      const galleryTrack = document.getElementById('gallery-track');
-      const galleryDots = document.getElementById('gallery-dots');
-      const galleryPrevBtn = document.getElementById('gallery-prev-btn');
-      const galleryNextBtn = document.getElementById('gallery-next-btn');
-      let activeGalleryIndex = 0;
-
-      function buildGallery() {
-        if (!galleryTrack || !galleryDots) return;
-        galleryTrack.innerHTML = '';
-        galleryDots.innerHTML = '';
-
-        GALLERY_PHOTOS.forEach((item, idx) => {
-          const slide = document.createElement('div');
-          slide.className = 'gallery-slide snap-center shrink-0 w-[244px] text-center';
-          slide.innerHTML = `
-            <div class="relative w-full h-[314px] p-1.5 drop-shadow-[0_14px_26px_rgba(0,0,0,0.55)]">
-              <div class="relative w-full h-full">
-                <!-- Local DSC Photo Clipped Inside Mughal Arch -->
-                <img
-                  src="${item.src}"
-                  alt="${item.alt}"
-                  loading="lazy"
-                  class="gallery-photo-img w-full h-full object-cover object-top bg-[#0a1226]"
-                  style="clip-path: url(#mughalArchClip);"
-                />
-                <!-- Elegant Gold-Rimmed Y & M Monogram Fallback (Only shown if local photo fails to load) -->
-                <div
-                  class="gallery-fallback-card hidden absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#162244] via-[#0e1730] to-[#0a1124] px-4"
-                  style="clip-path: url(#mughalArchClip);"
-                >
-                  <div class="w-20 h-20 rounded-full border border-[#E8C97A]/70 flex items-center justify-center bg-[#0c1328]/70 shadow-inner">
-                    <span class="font-script text-[1.95rem] text-[#FCE9B5] leading-none">Y &amp; M</span>
-                  </div>
-                  <p class="mt-3 text-[11px] font-ui uppercase tracking-[0.2em] text-[#E8C97A]/85">${item.src.replace('./', '')}</p>
-                </div>
-                <!-- Gold Mughal Cusped Arch Rim -->
-                <svg viewBox="0 0 240 310" preserveAspectRatio="none" class="absolute inset-0 w-full h-full pointer-events-none" aria-hidden="true">
-                  <path
-                    d="M 120 8 C 138 28, 162 32, 176 52 C 192 72, 228 84, 228 118 L 228 300 L 12 300 L 12 118 C 12 84, 48 72, 64 52 C 78 32, 102 28, 120 8 Z"
-                    fill="none"
-                    stroke="#E8C97A"
-                    stroke-width="2.1"
-                  />
-                  <path
-                    d="M 120 15 C 136 33, 158 37, 171 55 C 186 74, 221 86, 221 118 L 221 294 L 19 294 L 19 118 C 19 86, 54 74, 69 55 C 82 37, 104 33, 120 15 Z"
-                    fill="none"
-                    stroke="#C89F4C"
-                    stroke-width="0.75"
-                    stroke-opacity="0.55"
-                  />
-                </svg>
-              </div>
-            </div>
-            <p class="mt-2 italic text-[1.04rem] text-[#B9C4DC]" data-i18n="${item.capKey}"></p>
-          `;
-
-          const imgEl = slide.querySelector('.gallery-photo-img');
-          const fallbackEl = slide.querySelector('.gallery-fallback-card');
-          if (imgEl && fallbackEl) {
-            const showFallback = () => {
-              imgEl.classList.add('hidden');
-              fallbackEl.classList.remove('hidden');
-            };
-            imgEl.addEventListener('error', showFallback);
-            if (imgEl.complete && imgEl.naturalWidth === 0) showFallback();
-          }
-
-          galleryTrack.appendChild(slide);
-
-          const dot = document.createElement('button');
-          dot.type = 'button';
-          dot.setAttribute('aria-label', `View photo ${idx + 1}`);
-          dot.className = 'gallery-dot h-2 rounded-full transition-all duration-300 cursor-pointer ' +
-            (idx === 0 ? 'w-6 bg-[#FCE9B5]' : 'w-2 bg-[#C89F4C]/45');
-          dot.addEventListener('click', () => scrollToGallerySlide(idx));
-          galleryDots.appendChild(dot);
-        });
-      }
-
-      function updateGalleryDots(index) {
-        activeGalleryIndex = index;
-        const dots = document.querySelectorAll('.gallery-dot');
-        dots.forEach((d, idx) => {
-          if (idx === index) {
-            d.classList.remove('w-2', 'bg-[#C89F4C]/45');
-            d.classList.add('w-6', 'bg-[#FCE9B5]');
-          } else {
-            d.classList.remove('w-6', 'bg-[#FCE9B5]');
-            d.classList.add('w-2', 'bg-[#C89F4C]/45');
-          }
-        });
-      }
-
-      function scrollToGallerySlide(index) {
-        if (!galleryTrack) return;
-        const slides = galleryTrack.querySelectorAll('.gallery-slide');
-        if (!slides.length) return;
-        const clamped = (index + slides.length) % slides.length;
-        const target = slides[clamped];
-        const leftOffset = target.offsetLeft - (galleryTrack.clientWidth - target.clientWidth) / 2;
-        galleryTrack.scrollTo({ left: leftOffset, behavior: 'smooth' });
-        updateGalleryDots(clamped);
-      }
-
-      buildGallery();
-
-      if (galleryPrevBtn) {
-        galleryPrevBtn.addEventListener('click', () => scrollToGallerySlide(activeGalleryIndex - 1));
-      }
-      if (galleryNextBtn) {
-        galleryNextBtn.addEventListener('click', () => scrollToGallerySlide(activeGalleryIndex + 1));
-      }
-
-      if (galleryTrack) {
-        let galleryScrollTick = null;
-        galleryTrack.addEventListener('scroll', () => {
-          clearTimeout(galleryScrollTick);
-          galleryScrollTick = setTimeout(() => {
-            const slides = galleryTrack.querySelectorAll('.gallery-slide');
-            const center = galleryTrack.scrollLeft + galleryTrack.clientWidth / 2;
-            let closestIdx = 0;
-            let closestDist = Infinity;
-            slides.forEach((sl, idx) => {
-              const slCenter = sl.offsetLeft + sl.clientWidth / 2;
-              const dist = Math.abs(center - slCenter);
-              if (dist < closestDist) {
-                closestDist = dist;
-                closestIdx = idx;
-              }
-            });
-            updateGalleryDots(closestIdx);
-          }, 70);
-        });
-      }
-
-      /* -------------------------------------------------------------------
-         5. Section 6: All 16 Wedding Chapters & Working .ICS Downloads
-      ------------------------------------------------------------------- */
-      const VENUE_FULL = 'Balaji Resort & Banquet Hall, Kesar Nagar Chauraha, Sanganer, Barhmohanpura, Jaipur, Rajasthan';
-
-      const CHAPTERS_DATA = [
-        // Day 1: Sunday, Dec 13, 2026 (7 Chapters)
-        { id: 'subah', day: 1, num: 1, time: '9:30 am', color: '#84D29B', titleKey: 'd1_e1_title', descKey: 'd1_e1_desc', start: '20261213T093000', end: '20261213T113000' },
-        { id: 'bhaat', day: 1, num: 2, time: '1:15 pm', color: '#84D29B', titleKey: 'd1_e2_title', descKey: 'd1_e2_desc', start: '20261213T131500', end: '20261213T150000' },
-        { id: 'daawat', day: 1, num: 3, time: '1:30 pm', color: '#84D29B', titleKey: 'd1_e3_title', descKey: 'd1_e3_desc', start: '20261213T133000', end: '20261213T153000' },
-        { id: 'chak', day: 1, num: 4, time: '2:15 pm', color: '#84D29B', titleKey: 'd1_e4_title', descKey: 'd1_e4_desc', start: '20261213T141500', end: '20261213T161500' },
-        { id: 'ring', day: 1, num: 5, time: '5:15 pm', color: '#D6B4FC', titleKey: 'd1_e5_title', descKey: 'd1_e5_desc', start: '20261213T171500', end: '20261213T181500' },
-        { id: 'jashn', day: 1, num: 6, time: '6:15 pm', color: '#D6B4FC', titleKey: 'd1_e6_title', descKey: 'd1_e6_desc', start: '20261213T181500', end: '20261213T223000' },
-        { id: 'manuhaar', day: 1, num: 7, time: '7:15 pm', color: '#D6B4FC', titleKey: 'd1_e7_title', descKey: 'd1_e7_desc', start: '20261213T191500', end: '20261213T230000' },
-
-        // Day 2: Monday, Dec 14, 2026 (9 Chapters)
-        { id: 'chaicharcha', day: 2, num: 8, time: '7:00 am', color: '#F5C26B', titleKey: 'd2_e1_title', descKey: 'd2_e1_desc', start: '20261214T070000', end: '20261214T080000' },
-        { id: 'nashto', day: 2, num: 9, time: '8:00 am', color: '#F5C26B', titleKey: 'd2_e2_title', descKey: 'd2_e2_desc', start: '20261214T080000', end: '20261214T091500' },
-        { id: 'telban', day: 2, num: 10, time: '9:15 am', color: '#F5C26B', titleKey: 'd2_e3_title', descKey: 'd2_e3_desc', start: '20261214T091500', end: '20261214T110000' },
-        { id: 'pilapyaar', day: 2, num: 11, time: '11:15 am', color: '#F5C26B', titleKey: 'd2_e4_title', descKey: 'd2_e4_desc', start: '20261214T111500', end: '20261214T130000' },
-        { id: 'jeeman', day: 2, num: 12, time: '1:00 pm', color: '#F5C26B', titleKey: 'd2_e5_title', descKey: 'd2_e5_desc', start: '20261214T130000', end: '20261214T153000' },
-        { id: 'nikasi', day: 2, num: 13, time: '5:15 pm', color: '#F5C26B', titleKey: 'd2_e6_title', descKey: 'd2_e6_desc', start: '20261214T171500', end: '20261214T191500' },
-        { id: 'agwaani', day: 2, num: 14, time: '7:15 pm', color: '#F5C26B', titleKey: 'd2_e7_title', descKey: 'd2_e7_desc', start: '20261214T191500', end: '20261214T201500' },
-        { id: 'weddingfeast', day: 2, num: 15, time: '8:15 pm', color: '#F5C26B', titleKey: 'd2_e8_title', descKey: 'd2_e8_desc', start: '20261214T201500', end: '20261214T223000' },
-        { id: 'saatvachan', day: 2, num: 16, time: '10:15 pm', color: '#F5C26B', titleKey: 'd2_e9_title', descKey: 'd2_e9_desc', start: '20261214T221500', end: '20261215T013000' }
-      ];
-
-      function buildChapterLists() {
-        const day1El = document.getElementById('day1-chapters-list');
-        const day2El = document.getElementById('day2-chapters-list');
-        if (!day1El || !day2El) return;
-
-        day1El.innerHTML = '';
-        day2El.innerHTML = '';
-
-        CHAPTERS_DATA.forEach((chItem) => {
-          const card = document.createElement('div');
-          card.className = 'relative rounded-xl bg-[#131d39]/65 border border-[#C89F4C]/25 p-3.5 shadow-md';
-          card.innerHTML = `
-            <span class="absolute -left-[30px] top-4 w-2.5 h-2.5 rotate-45 bg-[#0c1328] border border-[#FCE9B5]"></span>
-            <div class="flex items-baseline justify-between gap-2">
-              <p class="font-script text-[1.75rem] leading-none" style="color:${chItem.color}">${chItem.time}</p>
-              <span class="text-[10px] font-ui uppercase tracking-[0.16em] text-[#C89F4C]">Ch. ${String(chItem.num).padStart(2, '0')}</span>
-            </div>
-            <h4 class="font-serif-ed text-[1.24rem] font-semibold text-[#F6F0E4] mt-1" data-i18n="${chItem.titleKey}"></h4>
-            <p class="italic text-[0.98rem] text-[#B9C4DC] mt-0.5 leading-snug" data-i18n="${chItem.descKey}"></p>
-            <button type="button" data-ics="${chItem.id}" class="ics-btn mt-2 text-[0.88rem] italic text-[#FCE9B5] underline underline-offset-4 hover:text-[#E8C97A] cursor-pointer" data-i18n="addToCal"></button>
-          `;
-          if (chItem.day === 1) day1El.appendChild(card);
-          else day2El.appendChild(card);
-        });
-      }
-
-      buildChapterLists();
-
-      // View Tabs Switching
-      const viewTabs = document.querySelectorAll('.saga-view-tab');
-      const highlightsView = document.getElementById('celebrations-highlights-view');
-      const fullView = document.getElementById('celebrations-full-view');
-      const day1Group = document.getElementById('saga-day1-group');
-      const day2Group = document.getElementById('saga-day2-group');
-
-      viewTabs.forEach((tab) => {
-        tab.addEventListener('click', () => {
-          const mode = tab.getAttribute('data-view-mode');
-          viewTabs.forEach((t) => {
-            t.classList.remove('bg-[#C89F4C]/30', 'text-[#FCE9B5]', 'font-semibold');
-            t.classList.add('text-[#B9C4DC]');
-          });
-          tab.classList.add('bg-[#C89F4C]/30', 'text-[#FCE9B5]', 'font-semibold');
-          tab.classList.remove('text-[#B9C4DC]');
-
-          if (!highlightsView || !fullView || !day1Group || !day2Group) return;
-          if (mode === 'highlights') {
-            fullView.classList.add('hidden');
-            highlightsView.classList.remove('hidden');
-          } else {
-            highlightsView.classList.add('hidden');
-            fullView.classList.remove('hidden');
-            day1Group.classList.toggle('hidden', mode === 'day2');
-            day2Group.classList.toggle('hidden', mode === 'day1');
-          }
-        });
-      });
-
-      // Delegated .ICS Calendar Download Handler
-      document.addEventListener('click', (e) => {
-        const btn = e.target.closest('.ics-btn');
-        if (!btn) return;
-        const id = btn.getAttribute('data-ics');
-        const ev = CHAPTERS_DATA.find((c) => c.id === id);
-        if (!ev) return;
-
-        const title = i18n.en[ev.titleKey] || 'Yash & Misha Wedding';
-        const desc = i18n.en[ev.descKey] || '';
-        const icsContent = [
-          'BEGIN:VCALENDAR',
-          'VERSION:2.0',
-          'PRODID:-//Yash & Misha Wedding Saga//EN',
-          'CALSCALE:GREGORIAN',
-          'BEGIN:VEVENT',
-          `UID:${ev.id}-yash-misha-2026@wedding`,
-          `SUMMARY:Yash & Misha — ${title}`,
-          `DTSTART;TZID=Asia/Kolkata:${ev.start}`,
-          `DTEND;TZID=Asia/Kolkata:${ev.end}`,
-          `LOCATION:${VENUE_FULL}`,
-          `DESCRIPTION:${desc} (#YashMeGhuliMishri)`,
-          'END:VEVENT',
-          'END:VCALENDAR'
-        ].join('\r\n');
-
-        try {
-          const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
-          const url = URL.createObjectURL(blob);
-          const link = document.createElement('a');
-          link.href = url;
-          link.download = `Yash_Misha_${ev.id}.ics`;
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          setTimeout(() => URL.revokeObjectURL(url), 1000);
-          showToast(currentLang === 'hi' ? 'कैलेंडर निमंत्रण (.ics) डाउनलोड हो गया' : 'Calendar invite (.ics) downloaded');
-        } catch (err) {
-          showToast(currentLang === 'hi' ? 'कैलेंडर डाउनलोड नहीं हो सका' : 'Could not download calendar file');
-        }
-      });
-
-      /* -------------------------------------------------------------------
-         6. Section 7: Live Countdown Timer to Dec 13, 2026 09:00 IST
-      ------------------------------------------------------------------- */
-      const weddingTargetMs = new Date('2026-12-13T09:00:00+05:30').getTime();
-
-      function updateCountdown() {
-        const diff = Math.max(0, weddingTargetMs - Date.now());
-        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-        const m = Math.floor((diff / (1000 * 60)) % 60);
-        const s = Math.floor((diff / 1000) % 60);
-
-        const elD = document.getElementById('cd-days');
-        const elH = document.getElementById('cd-hours');
-        const elM = document.getElementById('cd-mins');
-        const elS = document.getElementById('cd-secs');
-
-        if (elD) elD.textContent = String(d).padStart(2, '0');
-        if (elH) elH.textContent = String(h).padStart(2, '0');
-        if (elM) elM.textContent = String(m).padStart(2, '0');
-        if (elS) elS.textContent = String(s).padStart(2, '0');
-      }
-
-      updateCountdown();
-      setInterval(updateCountdown, 1000);
-
-      /* -------------------------------------------------------------------
-         7. Section 8: Interactive Google Map Embed Toggle
-      ------------------------------------------------------------------- */
-      const showLiveMapBtn = document.getElementById('show-live-map-btn');
-      if (showLiveMapBtn) {
-        showLiveMapBtn.addEventListener('click', () => {
-          const placeholder = document.getElementById('map-placeholder-view');
-          const iframe = document.getElementById('google-map-iframe');
-          if (iframe && placeholder) {
-            iframe.src = iframe.getAttribute('data-src');
-            placeholder.classList.add('hidden');
-            iframe.classList.remove('hidden');
-          }
-        });
-      }
-
-      /* -------------------------------------------------------------------
-         8. Complete Bilingual Dictionary (English & Hindi) + Toggle
-      ------------------------------------------------------------------- */
-      const i18n = {
-        en: {
-          heroWelcome: 'Welcome to the wedding of',
-          heroCoupleSingleLine: 'Yash & Misha',
-          heroHashtag: '#YashMeGhuliMishri',
-          tapToPlayBtn: 'Tap to Play \u2022 light the diyas of Ayodhya',
-          scrollDown: 'Scroll down',
-
-          theDateHeading: 'The Date',
-          scratchPrompt: 'Scratch or tap each gold coin to reveal',
-          coinSun: 'SUN',
-          coinMon: 'MON',
-          coinDay1: 'DAY 1',
-          coinDay2: 'DAY 2',
-          coinDecVal: 'DEC',
-          coinMonthSub: 'WINTER',
-          monthLabel: 'MONTH',
-          yearLabel: 'YEAR',
-
-          eldersBlessing: 'With the divine grace of Shri Ram & the blessings of our elders,\nyou are warmly invited to the wedding of',
-          groomFirst: 'Yash',
-          groomParents: 'SON OF\nSMT. PRIYA &\nSHRI RAM PRAKASH AGARWAL',
-          withScript: 'with',
-          brideFirst: 'Misha',
-          brideParents: 'DAUGHTER OF\nSMT. HIMANI GOYAL &\nSHRI PEEYUSH GOYAL',
-          cardMainDate: '13th & 14th December 2026',
-          cardMainVenue: 'Jaipur, Rajasthan \u2022 #YashMeGhuliMishri',
-
-          ourStoryHeading: 'Our Story',
-          storyIntro: 'It all started on day one of college. A single glance sparked an instant connection, and as we navigated a new chapter of life, we found our missing puzzle pieces in one another. Seven years of growth, laughter, and love later, our greatest adventure begins.',
-          m1Title: 'July 2019',
-          m1Desc: 'When two different worlds crossed paths by chance on day one of college.',
-          m2Title: '2020',
-          m2Desc: 'The world paused, but our bond only grew stronger through every call and mile.',
-          m3Title: '2025',
-          m3Desc: 'Families united, hearts aligned, and a sweet “yes” sealed over mithai.',
-
-          galleryHeading: 'Our Gallery',
-          cap1: 'By the lakeside palace',
-          cap2: 'Royal courtyard embrace',
-          cap3: 'Walking down old-world lanes',
-          cap4: 'Golden meadow stroll',
-          cap5: 'Behind the carved jharokha',
-          cap6: 'A promise on the white steps',
-          cap7: 'Forever begins with you',
-          swipeHint: 'Swipe or tap arrows to explore',
-
-          chaptersHeading: 'Chapters of Our Saga',
-          tabHighlights: 'Highlights',
-          tabAll16: 'All 16',
-          tabDay1: 'Dec 13',
-          tabDay2: 'Dec 14',
-          hlDate1: 'SUN, 13 DEC',
-          hlDate2: 'MON, 14 DEC',
-          hl1Title: 'Bhaat री Reet & Chak',
-          hl1Desc: 'When nanihal arrives & holy rituals begin',
-          hl2Title: 'Jashn - E - Ishq',
-          hl2Desc: 'The Ring Affair, Sangeet & मनुहार Supper',
-          hl3Title: 'Wedding & Saat Vachan',
-          hl3Desc: 'Pila Pyaar, Shahi Nikasi, Agwaani & Wedding Feast',
-          day1Header: 'SUNDAY, 13 DECEMBER \u2022 CHAPTERS 1–7',
-          day2Header: 'MONDAY, 14 DECEMBER \u2022 CHAPTERS 8–16',
-
-          d1_e1_title: 'Subah - E - Shuruaat',
-          d1_e1_desc: 'Warm chai, fresh smiles, and a royal welcome spread to kickstart the saga.',
-          d1_e2_title: 'Bhaat री Reet',
-          d1_e2_desc: 'When nanihal arrives, the celebrations just level up!',
-          d1_e3_title: 'Dopahar री Daawat',
-          d1_e3_desc: 'Good food, great conversation, and a lavish afternoon spread to keep the saga going.',
-          d1_e4_title: 'Chak',
-          d1_e4_desc: 'Tradition in every touch, devotion in every heart — kickstarting the holy rituals.',
-          d1_e5_title: 'The Ring Affair',
-          d1_e5_desc: 'Two hands, two rings, one promise of forever.',
-          d1_e6_title: 'Jashn - E - Ishq',
-          d1_e6_desc: 'An evening filled with music, dance & unforgettable memories.',
-          d1_e7_title: 'मनुहार - The Sangeet Supper',
-          d1_e7_desc: 'Because no celebration is complete without a little extra pyaar and manuhaar.',
-
-          d2_e1_title: 'चाय Par चर्चा',
-          d2_e1_desc: 'Steaming cups and sweet conversations to kick start the big day.',
-          d2_e2_title: 'Garma-Garam Nashto',
-          d2_e2_desc: 'Pet pooja first, wedding rituals next!',
-          d2_e3_title: 'Tel Ban Ki Rasam',
-          d2_e3_desc: 'A timeless ritual of purity, prosperity and love.',
-          d2_e4_title: 'Pila Pyaar (Haldi)',
-          d2_e4_desc: 'Haldi ka rang, apno ka sang, aur khushiyon ki bahaar.',
-          d2_e5_title: 'Dopahar री Jeeman',
-          d2_e5_desc: 'Savoring tradition, good food and togetherness before the baraat.',
-          d2_e6_title: 'Ghod Chadai & Shahi Nikasi',
-          d2_e6_desc: 'Dhol-nagado ki goonj aur apno ka naach — nikal padi hai dulhe raja ki shahi baraat.',
-          d2_e7_title: 'Agwaani & Jashn',
-          d2_e7_desc: 'Ladkiwaale ready, baraati steady — let the grand welcome begin!',
-          d2_e8_title: 'The Wedding Feast',
-          d2_e8_desc: 'A grand culinary celebration bringing families together over exquisite flavours and festive cheer!',
-          d2_e9_title: 'Saat Vachan',
-          d2_e9_desc: 'Hand in hand, step by step, walking into forever.',
-          sagaClosingQuote: '“Rishton ki garmahat, apno ka ashirwad, aur ek naye safar ki shuruat — thank you for pouring your love into our saga.”',
-          addToCal: 'Add to calendar',
-
-          countdownHeading: 'The Celebration Begins',
-          daysLbl: 'Days',
-          hoursLbl: 'Hours',
-          minsLbl: 'Minutes',
-          secsLbl: 'Seconds',
-          countdownSub: 'until the auspicious celebrations begin on Sunday, 13 December 2026',
-
-          locationHeading: 'Location',
-          venueCityCaps: 'JAIPUR, RAJASTHAN',
-          venueName: 'Balaji Resort & Banquet Hall',
-          venueAddr: 'Kesar Nagar Chauraha, Sanganer, Barhmohanpura, Jaipur, Rajasthan',
-          showMapBtn: 'Show the map',
-          openGoogleMaps: 'OPEN IN GOOGLE MAPS',
-
-          gettingThereHeading: 'Getting There',
-          travelAirTitle: 'By Air',
-          airportInfo: 'Jaipur International Airport (JAI) is approximately 15 minutes from the venue.',
-          travelTrainTitle: 'By Rail',
-          trainInfo: 'Jaipur Junction Railway Station is approximately 25 minutes away via Tonk Road / Sanganer.',
-          travelRoadTitle: 'By Road',
-          roadInfo: 'Direct highway access via Tonk Road & Ring Road to Kesar Nagar Chauraha, Sanganer with valet parking on site.',
-
-          dressCodeHeading: 'Dress Code',
-          dressCodeSub: 'A curated palette for our celebrations, if you’d like a festive hint.',
-          dcTitleHaldi: 'Ivory Haldi',
-          dcHaldiDesc: 'Shades of Ivory, Cream & Soft Pearl',
-          dcTitleSangeet: 'Sangeet Glam',
-          dcSangeetDesc: 'Midnight Jewel Tones & Cocktail Shimmer',
-          dcTitleWedding: 'Traditional Wedding',
-          dcWeddingDesc: 'Royal Heritage Silks, Crimson & Antique Gold',
-
-          familiesHeading: 'Our Families',
-          withBlessingsCaps: 'WITH THE BLESSINGS OF',
-          grandparentsGroom: 'Smt. Sumitra Devi &\nLate Shri Balmukund Agarwal',
-          eagerCaps: 'EAGER TO SEE YOU',
-          familyGroomLine: 'The Agarwal Family',
-          waitingCaps: 'WAITING TO WELCOME YOU',
-          waitingLine: 'The Agarwal Parivaar',
-          dontMissCaps: 'DON’T YOU DARE MISS IT',
-          kidsQuote: 'Mohit, Girdhar and Kashish say:\nyou must come to the wedding!',
-
-          footerLove: 'With love, the Agarwal family',
-          footerCouple: 'Yash & Misha',
-          footerSaga: 'Our Eternal Union Saga',
-          footerDate: '13 – 14 December 2026'
-        },
-
-        hi: {
-          heroWelcome: 'शुभ विवाह में आपका सादर स्वागत है',
-          heroCoupleSingleLine: 'यश एवं मिशा',
-          heroHashtag: '#YashMeGhuliMishri',
-          tapToPlayBtn: 'Play दबाएँ \u2022 अयोध्या के दीये जलाएँ',
-          scrollDown: 'नीचे स्क्रॉल करें',
-
-          theDateHeading: 'शुभ तिथि',
-          scratchPrompt: 'तिथि देखने के लिए हर स्वर्ण सिक्के को खुरचें या टैप करें',
-          coinSun: 'रवि',
-          coinMon: 'सोम',
-          coinDay1: 'दिन 1',
-          coinDay2: 'दिन 2',
-          coinDecVal: 'दिसं',
-          coinMonthSub: 'शरद',
-          monthLabel: 'माह',
-          yearLabel: 'वर्ष',
-
-          eldersBlessing: 'प्रभु श्रीराम की कृपा एवं बड़ों के आशीर्वाद से,\nहम आपको विवाह उत्सव में सादर आमंत्रित करते हैं',
-          groomFirst: 'यश',
-          groomParents: 'सुपुत्र\nश्रीमती प्रिया एवं\nश्री राम प्रकाश अग्रवाल',
-          withScript: 'संग',
-          brideFirst: 'मिशा',
-          brideParents: 'सुपुत्री\nश्रीमती हिमानी गोयल एवं\nश्री पीयूष गोयल',
-          cardMainDate: '13 एवं 14 दिसम्बर 2026',
-          cardMainVenue: 'जयपुर, राजस्थान \u2022 #YashMeGhuliMishri',
-
-          ourStoryHeading: 'हमारी कहानी',
-          storyIntro: 'यह सब कॉलेज के पहले दिन शुरू हुआ। एक नज़र ने तुरंत एक गहरा रिश्ता जोड़ दिया, और जैसे-जैसे हमने ज़िंदगी के एक नए अध्याय में कदम रखा, हमें एक-दूसरे में अपना अधूरा हिस्सा मिल गया। सात साल के साथ, हँसी और प्यार के बाद, अब हमारे जीवन का सबसे खूबसूरत सफ़र शुरू हो रहा है।',
-          m1Title: 'जुलाई 2019',
-          m1Desc: 'जब कॉलेज के पहले दिन दो अलग-अलग दुनिया संयोग से एक मोड़ पर मिलीं।',
-          m2Title: '2020',
-          m2Desc: 'दुनिया थम गई, पर हर बात और दूरी के साथ हमारा रिश्ता और गहरा होता गया।',
-          m3Title: '2025',
-          m3Desc: 'परिवार मिले, दिल जुड़े, और मिठाई के साथ एक प्यारी सी ‘हाँ’ पर मुहर लगी।',
-
-          galleryHeading: 'हमारी झलकियाँ',
-          cap1: 'झील किनारे महल के पास',
-          cap2: 'शाही आँगन में एक साथ',
-          cap3: 'पुरानी गलियों की सैर',
-          cap4: 'सुनहरे मैदान में टहलते हुए',
-          cap5: 'नक्काशीदार झरोखे के पीछे',
-          cap6: 'सफेद सीढ़ियों पर एक वादा',
-          cap7: 'आपके साथ अनंत की शुरुआत',
-          swipeHint: 'आगे देखने के लिए स्वाइप या तीर दबाएँ',
-
-          chaptersHeading: 'हमारे उत्सव के अध्याय',
-          tabHighlights: 'प्रमुख',
-          tabAll16: 'सभी 16',
-          tabDay1: '13 दिसं',
-          tabDay2: '14 दिसं',
-          hlDate1: 'रविवार, 13 दिसं',
-          hlDate2: 'सोमवार, 14 दिसं',
-          hl1Title: 'भात री रीत एवं चाक',
-          hl1Desc: 'ननिहाल का आगमन एवं पावन रस्में',
-          hl2Title: 'जश्न - ए - इश्क़',
-          hl2Desc: 'रिंग सेरेमनी, संगीत एवं मनुहार रात्रिभोज',
-          hl3Title: 'शुभ विवाह एवं सात वचन',
-          hl3Desc: 'पीला प्यार, शाही निकासी, अगवानी एवं प्रीतिभोज',
-          day1Header: 'रविवार, 13 दिसम्बर \u2022 अध्याय 1–7',
-          day2Header: 'सोमवार, 14 दिसम्बर \u2022 अध्याय 8–16',
-
-          d1_e1_title: 'सुबह - ए - शुरुआत',
-          d1_e1_desc: 'गरमा-गरम चाय, प्यारी मुस्कान और शाही स्वागत के साथ उत्सव का शुभारंभ।',
-          d1_e2_title: 'भात री रीत',
-          d1_e2_desc: 'ननिहाल के आगमन से उत्सव की रौनक और भी बढ़ जाती है!',
-          d1_e3_title: 'दोपहर री दावत',
-          d1_e3_desc: 'स्वादिष्ट भोजन, अपनों की बातें और शाही दोपहर की दावत।',
-          d1_e4_title: 'चाक पूजन',
-          d1_e4_desc: 'हर स्पर्श में परंपरा और हर दिल में श्रद्धा — पावन रस्मों का शुभारंभ।',
-          d1_e5_title: 'द रिंग अफेयर',
-          d1_e5_desc: 'दो हाथ, दो अंगूठियाँ और जन्मों के साथ का वादा।',
-          d1_e6_title: 'जश्न - ए - इश्क़',
-          d1_e6_desc: 'संगीत, नृत्य और अविस्मरणीय यादों से सजी सुहानी शाम।',
-          d1_e7_title: 'मनुहार - द संगीत सपर',
-          d1_e7_desc: 'थोड़े और प्यार और मनुहार के बिना कोई भी उत्सव पूरा नहीं होता।',
-
-          d2_e1_title: 'चाय पर चर्चा',
-          d2_e1_desc: 'गरमा-गरम चाय की चुस्कियों और मीठी बातों के साथ बड़े दिन की शुरुआत।',
-          d2_e2_title: 'गरमा-गरम नाश्तो',
-          d2_e2_desc: 'पहले पेट पूजा, उसके बाद शादी की पावन रस्में!',
-          d2_e3_title: 'तेल बान की रस्म',
-          d2_e3_desc: 'पवित्रता, समृद्धि और स्नेह की चिरंतन परंपरा।',
-          d2_e4_title: 'पीला प्यार (हल्दी)',
-          d2_e4_desc: 'हल्दी का रंग, अपनों का संग, और खुशियों की बहार।',
-          d2_e5_title: 'दोपहर री जीमण',
-          d2_e5_desc: 'बारात से पहले परंपरा, स्वादिष्ट व्यंजन और अपनों का साथ।',
-          d2_e6_title: 'घोड़ चढ़ाई एवं शाही निकासी',
-          d2_e6_desc: 'ढोल-नगाड़ों की गूँज और अपनों का नाच — निकल पड़ी है दूल्हे राजा की शाही बारात।',
-          d2_e7_title: 'अगवानी एवं जश्न',
-          d2_e7_desc: 'लड़कीवाले तैयार, बाराती सजे — आइए भव्य स्वागत की शुरुआत करें!',
-          d2_e8_title: 'द वेडिंग फीस्ट',
-          d2_e8_desc: 'लाजवाब व्यंजनों और उत्सव के उल्लास के साथ दोनों परिवारों का भव्य प्रीतिभोज!',
-          d2_e9_title: 'सात वचन',
-          d2_e9_desc: 'हाथों में हाथ थामे, कदम से कदम मिलाकर सदा के लिए एक होने का पावन क्षण।',
-          sagaClosingQuote: '“रिश्तों की गर्माहट, अपनों का आशीर्वाद, और एक नए सफर की शुरुआत — हमारे इस उत्सव में अपना प्यार पिरोने के लिए धन्यवाद।”',
-          addToCal: 'कैलेंडर में जोड़ें',
-
-          countdownHeading: 'उत्सव का आरंभ',
-          daysLbl: 'दिन',
-          hoursLbl: 'घंटे',
-          minsLbl: 'मिनट',
-          secsLbl: 'सेकंड',
-          countdownSub: 'रविवार, 13 दिसम्बर 2026 के मांगलिक उत्सव के आरंभ तक',
-
-          locationHeading: 'विवाह स्थल',
-          venueCityCaps: 'जयपुर, राजस्थान',
-          venueName: 'बालाजी रिसॉर्ट एंड बैंक्वेट हॉल',
-          venueAddr: 'केसर नगर चौराहा, सांगानेर, ब्रह्ममोहनपुरा, जयपुर, राजस्थान',
-          showMapBtn: 'मानचित्र देखें',
-          openGoogleMaps: 'गूगल मैप्स में खोलें',
-
-          gettingThereHeading: 'कैसे पहुँचें',
-          travelAirTitle: 'वायु मार्ग द्वारा',
-          airportInfo: 'जयपुर अंतर्राष्ट्रीय हवाई अड्डा (JAI) विवाह स्थल से लगभग 15 मिनट की दूरी पर है।',
-          travelTrainTitle: 'रेल मार्ग द्वारा',
-          trainInfo: 'जयपुर जंक्शन रेलवे स्टेशन टोंक रोड / सांगानेर मार्ग से लगभग 25 मिनट की दूरी पर है।',
-          travelRoadTitle: 'सड़क मार्ग द्वारा',
-          roadInfo: 'टोंक रोड और रिंग रोड से केसर नगर चौराहा, सांगानेर तक सीधी पहुँच एवं वैले पार्किंग उपलब्ध है।',
-
-          dressCodeHeading: 'परिधान रंग',
-          dressCodeSub: 'उत्सव के लिए सुझाए गए शुभ एवं आकर्षक रंग।',
-          dcTitleHaldi: 'आइवरी हल्दी',
-          dcHaldiDesc: 'आइवरी, क्रीम एवं हल्के मोती रंग',
-          dcTitleSangeet: 'संगीत ग्लैम',
-          dcSangeetDesc: 'रॉयल ज्वेल टोन एवं कॉकटेल शिमर',
-          dcTitleWedding: 'पारंपरिक विवाह',
-          dcWeddingDesc: 'शाही सिल्क, सिंदूरी लाल एवं एंटीक गोल्ड',
-
-          familiesHeading: 'हमारे परिवार',
-          withBlessingsCaps: 'पावन आशीर्वाद',
-          grandparentsGroom: 'श्रीमती सुमित्रा देवी एवं\nस्व. श्री बालमुकुंद अग्रवाल',
-          eagerCaps: 'दर्शनाभिलाषी',
-          familyGroomLine: 'अग्रवाल परिवार',
-          waitingCaps: 'स्वागतातुर',
-          waitingLine: 'अग्रवाल परिवार',
-          dontMissCaps: 'बाल मनुहार',
-          kidsQuote: 'मोहित, गिरधर और कशिश का कहना है:\nआपको शादी में ज़रूर आना है!',
-
-          footerLove: 'स्नेह सहित, अग्रवाल परिवार',
-          footerCouple: 'यश एवं मिशा',
-          footerSaga: 'हमारा शाश्वत मिलन',
-          footerDate: '13 – 14 दिसम्बर 2026'
-        }
-      };
-
-      let currentLang = 'en';
-      const langToggleBtn = document.getElementById('lang-toggle-btn');
-      const langBtnLabel = document.getElementById('lang-btn-label');
-
-      function applyLanguage(lang) {
-        currentLang = lang;
-        const dict = i18n[lang] || i18n.en;
-        document.documentElement.lang = lang === 'hi' ? 'hi' : 'en';
-
-        if (langBtnLabel) {
-          langBtnLabel.textContent = lang === 'en' ? 'हिंदी' : 'EN';
-          langBtnLabel.className = lang === 'en' ? 'font-hindi leading-none' : 'font-ui leading-none';
-        }
-
-        document.querySelectorAll('[data-i18n]').forEach((el) => {
-          const key = el.getAttribute('data-i18n');
-          if (dict[key] !== undefined) {
-            el.innerHTML = String(dict[key]).replace(/\n/g, '<br />');
-          }
-        });
-      }
-
-      // Initialize all text nodes (including dynamically built gallery captions & 16 chapters)
-      applyLanguage('en');
-
-      if (langToggleBtn) {
-        langToggleBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const nextLang = currentLang === 'en' ? 'hi' : 'en';
-          applyLanguage(nextLang);
-          showToast(nextLang === 'hi' ? 'भाषा: हिन्दी' : 'Language: English');
-        });
-      }
-    })();
-  </script>
-</body>
-</html>
+                 C 206 32
